@@ -810,9 +810,14 @@ footer {
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <div style="display:flex;gap:8px;align-items:center;">
+  <button class="theme-toggle" onclick="toggleLang()" id="langBtn" style="border-color:var(--teal);color:var(--teal);">
+    🌐 English
+  </button>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
     <span id="themeIcon">☀️</span> Mode clair
   </button>
+</div>
 </nav>
 
 <!-- ── HERO ── -->
@@ -820,16 +825,16 @@ footer {
   <div class="hero-bg"></div>
   <div class="hero-grid">
     <div>
-      <div class="hero-tag">Disponible · Ouvert aux opportunités</div>
+      <div class="hero-tag" id="hero-tag">Disponible · Ouvert aux opportunités</div>
       <h1 class="hero-name">Manoela<br><span>Hardy</span><br>Rakotonarivo</h1>
-      <p class="hero-title">Développeur Full-Stack · Angular & NestJS</p>
-      <p class="hero-desc">
+      <p class="hero-title" id="hero-title">Développeur Full-Stack · Angular & NestJS</p>
+      <p class="hero-desc" id="hero-desc">
         Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.
       </p>
       <div class="hero-cta">
-        <a href="#projects" class="btn-primary">Voir mes projets →</a>
-        <a href="#contact" class="btn-secondary">Me contacter</a>
-        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" style="border-color:var(--accent);color:var(--accent);">⬇ Télécharger CV</a>
+        <a href="#projects" class="btn-primary" id="hero-cta1">Voir mes projets →</a>
+        <a href="#contact" class="btn-secondary" id="hero-cta2">Me contacter</a>
+        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" id="hero-cv" style="border-color:var(--accent);color:var(--accent);">⬇ Télécharger CV</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -862,10 +867,10 @@ footer {
   <div style="max-width:1200px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
       <div class="reveal">
-        <p class="section-label">// à propos</p>
-        <h2 class="section-title" style="margin-bottom:20px;">Pourquoi je code</h2>
+        <p class="section-label" id="about-label">// à propos</p>
+        <h2 class="section-title" id="about-title" style="margin-bottom:20px;">Pourquoi je code</h2>
         <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px;">
-          J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style="color:var(--text)">fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.
+          <span id="about-p1">J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style="color:var(--text)">fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.
         </p>
         <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px;">
           Chez Orchis International, j'ai eu la chance de travailler sur <strong style="color:var(--text)">QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.
@@ -903,8 +908,8 @@ footer {
 
 <!-- ── SKILLS ── -->
 <section id="skills">
-  <p class="section-label">// compétences</p>
-  <h2 class="section-title reveal">Stack technique</h2>
+  <p class="section-label" id="skills-label">// compétences</p>
+  <h2 class="section-title reveal" id="skills-title">Stack technique</h2>
   <div class="skills-grid">
     <div class="skill-card reveal">
       <div class="skill-header"><span class="skill-name">Angular</span><span class="skill-pct">95%</span></div>
@@ -972,14 +977,14 @@ footer {
 <!-- ── PROJECTS ── -->
 <section id="projects" style="background:var(--bg2); max-width:100%; padding: 100px 80px;">
   <div style="max-width:1200px;margin:0 auto;">
-    <p class="section-label">// projets</p>
-    <h2 class="section-title reveal">Ce que j'ai construit</h2>
+    <p class="section-label" id="projects-label">// projets</p>
+    <h2 class="section-title reveal" id="projects-title">Ce que j'ai construit</h2>
     <div class="projects-grid">
 
       <div class="project-card reveal">
         <div class="project-icon">🏫</div>
         <div class="project-name">EKOLOVA</div>
-        <p class="project-desc">Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.</p>
+        <p class="project-desc" id="proj1-desc">Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.</p>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Vite</span>
@@ -992,7 +997,7 @@ footer {
       <div class="project-card reveal">
         <div class="project-icon">🎬</div>
         <div class="project-name">MadaMovie</div>
-        <p class="project-desc">Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.</p>
+        <p class="project-desc" id="proj2-desc">Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.</p>
         <div class="project-tags">
           <span class="tag">Angular</span>
           <span class="tag">Ionic</span>
@@ -1006,7 +1011,7 @@ footer {
       <div class="project-card reveal">
         <div class="project-icon">🚗</div>
         <div class="project-name">VarotraFiara</div>
-        <p class="project-desc">API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.</p>
+        <p class="project-desc" id="proj3-desc">API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.</p>
         <div class="project-tags">
           <span class="tag">Spring Boot</span>
           <span class="tag">MongoDB</span>
@@ -1022,14 +1027,14 @@ footer {
 
 <!-- ── EXPERIENCE ── -->
 <section id="experience">
-  <p class="section-label">// expérience</p>
-  <h2 class="section-title reveal">Parcours professionnel</h2>
+  <p class="section-label" id="exp-label">// expérience</p>
+  <h2 class="section-title reveal" id="exp-title">Parcours professionnel</h2>
   <div class="timeline">
 
     <div class="timeline-item reveal">
       <div class="timeline-header">
-        <div class="timeline-title">Développeur Full-Stack</div>
-        <div class="timeline-date">Mai 2025 — Aujourd'hui</div>
+        <div class="timeline-title" id="exp1-title">Développeur Full-Stack</div>
+        <div class="timeline-date" id="exp1-date">Mai 2025 — Aujourd'hui</div>
       </div>
       <div class="timeline-company">Orchis International · Antananarivo</div>
       <div class="timeline-tags">
@@ -1037,26 +1042,26 @@ footer {
         <span class="tag">MongoDB</span><span class="tag">CQRS</span><span class="tag">DDD</span>
       </div>
       <ul class="timeline-bullets">
-        <li>Développement front-end (Angular) et back-end (NestJS) du système <strong>QOLEE-TMS-AI</strong> — gestion intelligente du transport et suivi logistique</li>
-        <li>Projet avec clients majeurs : <strong>Warning</strong> et <strong>Air France</strong></li>
-        <li>Architecture NX Monorepo avec patterns <strong>CQRS</strong> et <strong>DDD</strong> pour scalabilité et maintenabilité</li>
-        <li>Tests E2E avec <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions</li>
+        <li id="exp1-b1">Développement front-end (Angular) et back-end (NestJS) du système <strong>QOLEE-TMS-AI</strong> — gestion intelligente du transport et suivi logistique</li>
+        <li id="exp1-b2">Projet avec clients majeurs : <strong>Warning</strong> et <strong>Air France</strong></li>
+        <li id="exp1-b3">Architecture NX Monorepo avec patterns <strong>CQRS</strong> et <strong>DDD</strong> pour scalabilité et maintenabilité</li>
+        <li id="exp1-b4">Tests E2E avec <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions</li>
       </ul>
     </div>
 
     <div class="timeline-item reveal">
       <div class="timeline-header">
-        <div class="timeline-title">Stagiaire — Développement Web & Mobile</div>
-        <div class="timeline-date">Oct. 2024 — Avr. 2025</div>
+        <div class="timeline-title" id="exp2-title">Stagiaire — Développement Web & Mobile</div>
+        <div class="timeline-date" id="exp2-date">Oct. 2024 — Avr. 2025</div>
       </div>
       <div class="timeline-company">Orchis International · Antananarivo</div>
       <div class="timeline-tags">
         <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span><span class="tag">C</span>
       </div>
       <ul class="timeline-bullets">
-        <li>Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI</li>
-        <li>Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)</li>
-        <li>Intégration agile, revue de code et participation aux sprints de livraison</li>
+        <li id="exp2-b1">Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI</li>
+        <li id="exp2-b2">Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)</li>
+        <li id="exp2-b3">Intégration agile, revue de code et participation aux sprints de livraison</li>
       </ul>
     </div>
 
@@ -1066,8 +1071,8 @@ footer {
 <!-- ── CERTIFICATIONS ── -->
 <section id="certifications" style="background:var(--bg2); max-width:100%; padding: 100px 80px;">
   <div style="max-width:1200px;margin:0 auto;">
-    <p class="section-label">// certifications</p>
-    <h2 class="section-title reveal">Certifications</h2>
+    <p class="section-label" id="cert-label">// certifications</p>
+    <h2 class="section-title reveal" id="cert-title">Certifications</h2>
     <div class="certs-grid">
       <div class="cert-card reveal">
         <div class="cert-badge">⚡</div>
@@ -1111,9 +1116,9 @@ footer {
 <div id="contact">
   <div class="contact-inner">
     <div>
-      <p class="section-label">// contact</p>
-      <h2 class="section-title reveal" style="margin-bottom:24px;">Travaillons<br>ensemble.</h2>
-      <p style="font-size:14px;color:var(--text2);margin-bottom:32px;line-height:1.7;">
+      <p class="section-label" id="contact-label">// contact</p>
+      <h2 class="section-title reveal" id="contact-title" style="margin-bottom:24px;">Travaillons<br>ensemble.</h2>
+      <p id="contact-desc" style="font-size:14px;color:var(--text2);margin-bottom:32px;line-height:1.7;">
         Ouvert à de nouvelles opportunités — que ce soit un poste full-time, du freelance ou une collaboration sur un projet ambitieux.
       </p>
       <div class="contact-info">
@@ -1150,22 +1155,22 @@ footer {
 
     <form class="contact-form reveal" onsubmit="handleSubmit(event)">
       <div class="form-group">
-        <label class="form-label">NOM</label>
+        <label class="form-label" id="form-name">NOM</label>
         <input type="text" class="form-input" placeholder="Votre nom" required>
       </div>
       <div class="form-group">
-        <label class="form-label">EMAIL</label>
+        <label class="form-label" id="form-email-label">EMAIL</label>
         <input type="email" class="form-input" placeholder="votre@email.com" required>
       </div>
       <div class="form-group">
-        <label class="form-label">SUJET</label>
-        <input type="text" class="form-input" placeholder="Opportunité / Projet / Collaboration">
+        <label class="form-label" id="form-subject-label">SUJET</label>
+        <input type="text" class="form-input" id="form-subject-input" placeholder="Opportunité / Projet / Collaboration">
       </div>
       <div class="form-group">
-        <label class="form-label">MESSAGE</label>
-        <textarea class="form-textarea" placeholder="Décrivez votre projet ou opportunité..." required></textarea>
+        <label class="form-label" id="form-message-label">MESSAGE</label>
+        <textarea class="form-textarea" id="form-message-input" placeholder="Décrivez votre projet ou opportunité..." required></textarea>
       </div>
-      <button type="submit" class="form-submit" id="submitBtn">
+      <button type="submit" class="form-submit" id="form-send-btn">
         <span>Envoyer le message</span> <span>→</span>
       </button>
       <div id="formMsg" style="display:none;font-size:13px;color:var(--teal);margin-top:8px;font-family:'JetBrains Mono',monospace;"></div>
@@ -1279,5 +1284,259 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
+
+<script>
+const translations = {
+  fr: {
+    nav_home: "Accueil",
+    nav_about: "À propos",
+    nav_skills: "Compétences",
+    nav_projects: "Projets",
+    nav_experience: "Expérience",
+    nav_certs: "Certifications",
+    nav_contact: "Contact",
+    theme_light: "Mode clair",
+    theme_dark: "Mode sombre",
+    lang_btn: "🌐 English",
+
+    hero_tag: "Disponible · Ouvert aux opportunités",
+    hero_title: "Développeur Full-Stack · Angular & NestJS",
+    hero_desc: "Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.",
+    hero_cta1: "Voir mes projets →",
+    hero_cta2: "Me contacter",
+    hero_cv: "⬇ Télécharger CV",
+    stat1: "AN D'EXP.",
+    stat2: "PROJETS",
+    stat3: "CERTIFS",
+    stat4: "TECHNOS",
+
+    about_label: "// à propos",
+    about_title: "Pourquoi je code",
+    about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style='color:var(--text)'>fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.",
+    about_p2: "Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
+    about_p3: "Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong> à grande échelle.",
+    about_card1_title: "Orienté résultat",
+    about_card1_desc: "Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".",
+    about_card2_title: "Architecte avant tout",
+    about_card2_desc: "CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.",
+    about_card3_title: "Vision internationale",
+    about_card3_desc: "Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.",
+
+    skills_label: "// compétences",
+    skills_title: "Stack technique",
+
+    projects_label: "// projets",
+    projects_title: "Ce que j'ai construit",
+    proj1_desc: "Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.",
+    proj2_desc: "Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.",
+    proj3_desc: "API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.",
+    proj_link: "Voir sur GitHub →",
+
+    exp_label: "// expérience",
+    exp_title: "Parcours professionnel",
+    exp1_title: "Développeur Full-Stack",
+    exp1_date: "Mai 2025 — Aujourd'hui",
+    exp1_b1: "Développement front-end (Angular) et back-end (NestJS) du système <strong>QOLEE-TMS-AI</strong> — gestion intelligente du transport et suivi logistique",
+    exp1_b2: "Projet avec clients majeurs : <strong>Warning</strong> et <strong>Air France</strong>",
+    exp1_b3: "Architecture NX Monorepo avec patterns <strong>CQRS</strong> et <strong>DDD</strong> pour scalabilité et maintenabilité",
+    exp1_b4: "Tests E2E avec <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions",
+    exp2_title: "Stagiaire — Développement Web & Mobile",
+    exp2_date: "Oct. 2024 — Avr. 2025",
+    exp2_b1: "Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI",
+    exp2_b2: "Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)",
+    exp2_b3: "Intégration agile, revue de code et participation aux sprints de livraison",
+
+    cert_label: "// certifications",
+    cert_title: "Certifications",
+    cert_verify: "↗ Vérifier le certificat",
+
+    contact_label: "// contact",
+    contact_title: "Travaillons<br>ensemble.",
+    contact_desc: "Ouvert à de nouvelles opportunités — que ce soit un poste full-time, du freelance ou une collaboration sur un projet ambitieux.",
+    form_name: "NOM",
+    form_email: "EMAIL",
+    form_subject: "SUJET",
+    form_subject_ph: "Opportunité / Projet / Collaboration",
+    form_message: "MESSAGE",
+    form_message_ph: "Décrivez votre projet ou opportunité...",
+    form_send: "Envoyer le message",
+    form_success: "// Merci ! Je vous répondrai dans les plus brefs délais.",
+
+    footer: "Construit avec passion depuis Antananarivo 🇲🇬"
+  },
+  en: {
+    nav_home: "Home",
+    nav_about: "About",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_experience: "Experience",
+    nav_certs: "Certifications",
+    nav_contact: "Contact",
+    theme_light: "Light mode",
+    theme_dark: "Dark mode",
+    lang_btn: "🌐 Français",
+
+    hero_tag: "Available · Open to opportunities",
+    hero_title: "Full-Stack Developer · Angular & NestJS",
+    hero_desc: "Specialized in Angular, NestJS and NX Monorepo architectures. I build high-performance applications using modern patterns (CQRS, DDD) for international clients.",
+    hero_cta1: "View my projects →",
+    hero_cta2: "Contact me",
+    hero_cv: "⬇ Download CV",
+    stat1: "YR EXP.",
+    stat2: "PROJECTS",
+    stat3: "CERTS",
+    stat4: "TECHS",
+
+    about_label: "// about",
+    about_title: "Why I code",
+    about_p1: "I discovered programming with a simple conviction: code is the most powerful tool to turn ideas into reality. What drives me is building systems that <strong style='color:var(--text)'>actually work</strong> — not just in demos, but in production with real users.",
+    about_p2: "At Orchis International, I had the chance to work on <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> from the very start of my career — an ambitious project with clients like Air France. It taught me that code quality is not optional.",
+    about_p3: "I'm constantly learning — modern architectures, advanced patterns, new frameworks. My goal: become a developer capable of designing <strong style='color:var(--text)'>scalable and maintainable</strong> systems at scale.",
+    about_card1_title: "Result-driven",
+    about_card1_desc: "I deliver clean, tested and documented code — not just code that \"works on my machine\".",
+    about_card2_title: "Architecture first",
+    about_card2_desc: "CQRS, DDD, NX Monorepo — I think about structure before writing the first line.",
+    about_card3_title: "International vision",
+    about_card3_desc: "Working on globally impactful projects from Madagascar — that's my ambition.",
+
+    skills_label: "// skills",
+    skills_title: "Tech stack",
+
+    projects_label: "// projects",
+    projects_title: "What I've built",
+    proj1_desc: "School management application — assessments, periods, student tracking and report exports. Modern and intuitive interface.",
+    proj2_desc: "Mobile streaming app for Malagasy films — catalog, subscriptions, JWT authentication and mobile-first interface.",
+    proj3_desc: "REST API for a vehicle marketplace — listing management, favorites system and commissions. Clean and scalable architecture.",
+    proj_link: "View on GitHub →",
+
+    exp_label: "// experience",
+    exp_title: "Professional journey",
+    exp1_title: "Full-Stack Developer",
+    exp1_date: "May 2025 — Present",
+    exp1_b1: "Front-end (Angular) and back-end (NestJS) development of <strong>QOLEE-TMS-AI</strong> — intelligent transport management and logistics tracking system",
+    exp1_b2: "Project with major clients: <strong>Warning</strong> and <strong>Air France</strong>",
+    exp1_b3: "NX Monorepo architecture with <strong>CQRS</strong> and <strong>DDD</strong> patterns for scalability and maintainability",
+    exp1_b4: "E2E testing with <strong>Playwright</strong> and CI/CD pipelines via GitHub Actions",
+    exp2_title: "Intern — Web & Mobile Development",
+    exp2_date: "Oct. 2024 — Apr. 2025",
+    exp2_b1: "Skill development on Angular and active contribution to QOLEE-TMS-AI",
+    exp2_b2: "Algorithmic deepening through the <strong>France IOI</strong> program (C language)",
+    exp2_b3: "Agile integration, code reviews and sprint delivery participation",
+
+    cert_label: "// certifications",
+    cert_title: "Certifications",
+    cert_verify: "↗ Verify certificate",
+
+    contact_label: "// contact",
+    contact_title: "Let's work<br>together.",
+    contact_desc: "Open to new opportunities — whether it's a full-time position, freelance work or collaboration on an ambitious project.",
+    form_name: "NAME",
+    form_email: "EMAIL",
+    form_subject: "SUBJECT",
+    form_subject_ph: "Opportunity / Project / Collaboration",
+    form_message: "MESSAGE",
+    form_message_ph: "Describe your project or opportunity...",
+    form_send: "Send message",
+    form_success: "// Thank you! I'll get back to you as soon as possible.",
+
+    footer: "Built with passion from Antananarivo 🇲🇬"
+  }
+};
+
+let currentLang = 'fr';
+
+function toggleLang() {
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  applyTranslations();
+}
+
+function applyTranslations() {
+  const t = translations[currentLang];
+  
+  // Nav
+  document.getElementById('langBtn').innerHTML = t.lang_btn;
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navKeys = ['nav_home','nav_about','nav_skills','nav_projects','nav_experience','nav_certs','nav_contact'];
+  navLinks.forEach((link, i) => { if(navKeys[i]) link.textContent = t[navKeys[i]]; });
+
+  // Hero
+  document.getElementById('hero-tag').textContent = t.hero_tag;
+  document.getElementById('hero-title').textContent = t.hero_title;
+  document.getElementById('hero-desc').textContent = t.hero_desc;
+  document.getElementById('hero-cta1').textContent = t.hero_cta1;
+  document.getElementById('hero-cta2').textContent = t.hero_cta2;
+  document.getElementById('hero-cv').textContent = t.hero_cv;
+  document.querySelectorAll('.stat-label')[0].textContent = t.stat1;
+  document.querySelectorAll('.stat-label')[1].textContent = t.stat2;
+  document.querySelectorAll('.stat-label')[2].textContent = t.stat3;
+  document.querySelectorAll('.stat-label')[3].textContent = t.stat4;
+
+  // About
+  document.getElementById('about-label').textContent = t.about_label;
+  document.getElementById('about-title').textContent = t.about_title;
+  document.getElementById('about-p1').innerHTML = t.about_p1;
+  document.getElementById('about-p2').innerHTML = t.about_p2;
+  document.getElementById('about-p3').innerHTML = t.about_p3;
+  document.getElementById('about-card1-title').textContent = t.about_card1_title;
+  document.getElementById('about-card1-desc').textContent = t.about_card1_desc;
+  document.getElementById('about-card2-title').textContent = t.about_card2_title;
+  document.getElementById('about-card2-desc').textContent = t.about_card2_desc;
+  document.getElementById('about-card3-title').textContent = t.about_card3_title;
+  document.getElementById('about-card3-desc').textContent = t.about_card3_desc;
+
+  // Skills
+  document.getElementById('skills-label').textContent = t.skills_label;
+  document.getElementById('skills-title').textContent = t.skills_title;
+
+  // Projects
+  document.getElementById('projects-label').textContent = t.projects_label;
+  document.getElementById('projects-title').textContent = t.projects_title;
+  document.getElementById('proj1-desc').textContent = t.proj1_desc;
+  document.getElementById('proj2-desc').textContent = t.proj2_desc;
+  document.getElementById('proj3-desc').textContent = t.proj3_desc;
+  document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
+
+  // Experience
+  document.getElementById('exp-label').textContent = t.exp_label;
+  document.getElementById('exp-title').textContent = t.exp_title;
+  document.getElementById('exp1-title').textContent = t.exp1_title;
+  document.getElementById('exp1-date').textContent = t.exp1_date;
+  document.getElementById('exp1-b1').innerHTML = t.exp1_b1;
+  document.getElementById('exp1-b2').innerHTML = t.exp1_b2;
+  document.getElementById('exp1-b3').innerHTML = t.exp1_b3;
+  document.getElementById('exp1-b4').innerHTML = t.exp1_b4;
+  document.getElementById('exp2-title').textContent = t.exp2_title;
+  document.getElementById('exp2-date').textContent = t.exp2_date;
+  document.getElementById('exp2-b1').innerHTML = t.exp2_b1;
+  document.getElementById('exp2-b2').innerHTML = t.exp2_b2;
+  document.getElementById('exp2-b3').innerHTML = t.exp2_b3;
+
+  // Certifications
+  document.getElementById('cert-label').textContent = t.cert_label;
+  document.getElementById('cert-title').textContent = t.cert_title;
+  document.querySelectorAll('.cert-link').forEach(l => l.textContent = t.cert_verify);
+
+  // Contact
+  document.getElementById('contact-label').textContent = t.contact_label;
+  document.getElementById('contact-title').innerHTML = t.contact_title;
+  document.getElementById('contact-desc').textContent = t.contact_desc;
+  document.getElementById('form-name').textContent = t.form_name;
+  document.getElementById('form-email-label').textContent = t.form_email;
+  document.getElementById('form-subject-label').textContent = t.form_subject;
+  document.getElementById('form-subject-input').placeholder = t.form_subject_ph;
+  document.getElementById('form-message-label').textContent = t.form_message;
+  document.getElementById('form-message-input').placeholder = t.form_message_ph;
+  document.getElementById('form-send-btn').querySelector('span').textContent = t.form_send;
+  document.getElementById('footer-text').textContent = t.footer;
+
+  // Theme button
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const themeBtn = document.getElementById('themeBtn');
+  themeBtn.innerHTML = isDark 
+    ? `<span id="themeIcon">☀️</span> ${t.theme_light}`
+    : `<span id="themeIcon">🌙</span> ${t.theme_dark}`;
+}
+</script>
+
 </body>
 </html>
