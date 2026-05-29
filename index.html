@@ -787,6 +787,14 @@ footer {
 }
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 </head>
 <body>
 
@@ -795,6 +803,7 @@ footer {
   <div class="nav-logo">MH<span style="color:var(--text2);">.</span></div>
   <ul class="nav-links">
     <li><a href="#hero">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
     <li><a href="#skills">Compétences</a></li>
     <li><a href="#projects">Projets</a></li>
     <li><a href="#experience">Expérience</a></li>
@@ -820,6 +829,7 @@ footer {
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">Voir mes projets →</a>
         <a href="#contact" class="btn-secondary">Me contacter</a>
+        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" style="border-color:var(--accent);color:var(--accent);">⬇ Télécharger CV</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -845,6 +855,51 @@ footer {
     </div>
   </div>
 </div>
+
+
+<!-- ── ABOUT ── -->
+<section id="about" style="padding: 80px 80px 0;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="reveal">
+        <p class="section-label">// à propos</p>
+        <h2 class="section-title" style="margin-bottom:20px;">Pourquoi je code</h2>
+        <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px;">
+          J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style="color:var(--text)">fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.
+        </p>
+        <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px;">
+          Chez Orchis International, j'ai eu la chance de travailler sur <strong style="color:var(--text)">QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.
+        </p>
+        <p style="font-size:15px;color:var(--text2);line-height:1.8;">
+          Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style="color:var(--text)">scalables et maintenables</strong> à grande échelle.
+        </p>
+      </div>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
+          <div style="font-size:28px;">🎯</div>
+          <div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Orienté résultat</div>
+            <div style="font-size:13px;color:var(--text2);">Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".</div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
+          <div style="font-size:28px;">🏗️</div>
+          <div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Architecte avant tout</div>
+            <div style="font-size:13px;color:var(--text2);">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
+          </div>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
+          <div style="font-size:28px;">🌍</div>
+          <div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Vision internationale</div>
+            <div style="font-size:13px;color:var(--text2);">Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── SKILLS ── -->
 <section id="skills">
@@ -1212,7 +1267,7 @@ function handleSubmit(e) {
 }
 
 // Active nav link on scroll
-const sections = document.querySelectorAll('section[id], div[id]');
+const sections = document.querySelectorAll('section[id], div[id], [id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let current = '';
