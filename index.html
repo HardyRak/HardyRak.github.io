@@ -1550,10 +1550,15 @@ function applyTranslations() {
 }
 
 
-// Wire up lang button after DOM ready
-document.addEventListener('DOMContentLoaded', function() {
+// Wire up lang button
+window.addEventListener('load', function() {
   const langBtn = document.getElementById('langBtn');
-  if(langBtn) langBtn.addEventListener('click', toggleLang);
+  if(langBtn) {
+    langBtn.onclick = function() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyTranslations();
+    };
+  }
 });
 </script>
 
