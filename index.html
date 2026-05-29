@@ -1553,10 +1553,17 @@ function applyTranslations() {
 // Wire up lang button
 window.addEventListener('load', function() {
   const langBtn = document.getElementById('langBtn');
+  console.log('langBtn found:', langBtn);
   if(langBtn) {
     langBtn.onclick = function() {
+      console.log('Lang clicked, switching to:', currentLang === 'fr' ? 'en' : 'fr');
       currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      console.log('currentLang now:', currentLang);
+      const heroTag = document.getElementById('hero-tag');
+      console.log('hero-tag element:', heroTag);
+      console.log('Translation:', translations[currentLang].hero_tag);
       applyTranslations();
+      console.log('applyTranslations called');
     };
   }
 });
