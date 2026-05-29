@@ -982,6 +982,26 @@ footer {
     <h2 class="section-title reveal" id="projects-title">Ce que j'ai construit</h2>
     <div class="projects-grid">
 
+      <div class="project-card reveal" style="border-left-color:var(--accent);grid-column:1/-1;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+          <div style="display:flex;gap:12px;align-items:center;">
+            <div class="project-icon" style="background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);">🚚</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div class="project-name" id="qolee-name">QOLEE-TMS-AI</div>
+                <span style="font-size:10px;background:rgba(255,107,53,0.15);color:var(--accent);border:1px solid rgba(255,107,53,0.3);padding:2px 8px;border-radius:4px;font-family:'JetBrains Mono',monospace;" id="qolee-badge">PROFESSIONNEL</span>
+              </div>
+              <div style="font-size:12px;color:var(--teal);margin-top:2px;" id="qolee-company">Orchis International · Air France & Warning</div>
+            </div>
+          </div>
+        </div>
+        <p class="project-desc" id="qolee-desc">Système de gestion intelligente du transport et suivi logistique en temps réel. Architecture NX Monorepo avec patterns CQRS et DDD. Projet en production avec des clients internationaux majeurs.</p>
+        <div class="project-tags">
+          <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span>
+          <span class="tag">MongoDB</span><span class="tag">CQRS</span><span class="tag">DDD</span><span class="tag">Playwright</span>
+        </div>
+      </div>
+
       <div class="project-card reveal">
         <div class="project-icon">🏫</div>
         <div class="project-name">EKOLOVA</div>
@@ -1318,6 +1338,8 @@ const translations = {
     proj1_desc: 'Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports.',
     proj2_desc: 'Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT.',
     proj3_desc: 'API REST de marketplace de véhicules — gestion des annonces, favoris et commissions.',
+    qolee_badge: 'PROFESSIONNEL', qolee_company: 'Orchis International · Air France & Warning',
+    qolee_desc: 'Système de gestion intelligente du transport et suivi logistique en temps réel. Architecture NX Monorepo avec patterns CQRS et DDD. Projet en production avec des clients internationaux majeurs.',
     proj_link: 'Voir sur GitHub →',
     exp_label: '// expérience', exp_title: 'Parcours professionnel',
     exp1_title: 'Développeur Full-Stack', exp1_date: 'Mai 2025 — Aujourd\'hui',
@@ -1364,6 +1386,8 @@ const translations = {
     proj1_desc: 'School management application — assessments, periods, student tracking and report exports.',
     proj2_desc: 'Mobile streaming app for Malagasy films — catalog, subscriptions, JWT authentication.',
     proj3_desc: 'REST API for a vehicle marketplace — listing management, favorites and commissions.',
+    qolee_badge: 'PROFESSIONAL', qolee_company: 'Orchis International · Air France & Warning',
+    qolee_desc: 'Intelligent transport management and real-time logistics tracking system. NX Monorepo architecture with CQRS and DDD patterns. Production project with major international clients.',
     proj_link: 'View on GitHub →',
     exp_label: '// experience', exp_title: 'Professional journey',
     exp1_title: 'Full-Stack Developer', exp1_date: 'May 2025 — Present',
@@ -1418,6 +1442,9 @@ function applyTranslations() {
 
   set('skills-label', t.skills_label); set('skills-title', t.skills_title);
   set('projects-label', t.projects_label); set('projects-title', t.projects_title);
+  set('qolee-badge', t.qolee_badge);
+  set('qolee-company', t.qolee_company);
+  set('qolee-desc', t.qolee_desc);
   set('proj1-desc', t.proj1_desc); set('proj2-desc', t.proj2_desc); set('proj3-desc', t.proj3_desc);
   document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
 
