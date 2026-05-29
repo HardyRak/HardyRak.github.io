@@ -795,265 +795,7 @@ footer {
   gtag('js', new Date());
   gtag('config', 'G-XXXXXXXXXX');
 </script>
-<script>
-const translations = {
-  fr: {
-    nav_home: "Accueil",
-    nav_about: "À propos",
-    nav_skills: "Compétences",
-    nav_projects: "Projets",
-    nav_experience: "Expérience",
-    nav_certs: "Certifications",
-    nav_contact: "Contact",
-    theme_light: "Mode clair",
-    theme_dark: "Mode sombre",
-    lang_btn: "🌐 English",
 
-    hero_tag: "Disponible · Ouvert aux opportunités",
-    hero_title: "Développeur Full-Stack · Angular & NestJS",
-    hero_desc: "Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.",
-    hero_cta1: "Voir mes projets →",
-    hero_cta2: "Me contacter",
-    hero_cv: "⬇ Télécharger CV",
-    stat1: "AN D'EXP.",
-    stat2: "PROJETS",
-    stat3: "CERTIFS",
-    stat4: "TECHNOS",
-
-    about_label: "// à propos",
-    about_title: "Pourquoi je code",
-    about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style='color:var(--text)'>fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.",
-    about_p2: "<span id="about-p2">Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
-    about_p3: "<span id="about-p3">Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong> à grande échelle.",
-    about_card1_title: "Orienté résultat",
-    about_card1_desc: "Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".",
-    about_card2_title: "Architecte avant tout",
-    about_card2_desc: "CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.",
-    about_card3_title: "Vision internationale",
-    about_card3_desc: "Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.",
-
-    skills_label: "// compétences",
-    skills_title: "Stack technique",
-
-    projects_label: "// projets",
-    projects_title: "Ce que j'ai construit",
-    proj1_desc: "Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.",
-    proj2_desc: "Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.",
-    proj3_desc: "API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.",
-    proj_link: "Voir sur GitHub →",
-
-    exp_label: "// expérience",
-    exp_title: "Parcours professionnel",
-    exp1_title: "Développeur Full-Stack",
-    exp1_date: "Mai 2025 — Aujourd'hui",
-    exp1_b1: "Développement front-end (Angular) et back-end (NestJS) du système <strong>QOLEE-TMS-AI</strong> — gestion intelligente du transport et suivi logistique",
-    exp1_b2: "Projet avec clients majeurs : <strong>Warning</strong> et <strong>Air France</strong>",
-    exp1_b3: "Architecture NX Monorepo avec patterns <strong>CQRS</strong> et <strong>DDD</strong> pour scalabilité et maintenabilité",
-    exp1_b4: "Tests E2E avec <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions",
-    exp2_title: "Stagiaire — Développement Web & Mobile",
-    exp2_date: "Oct. 2024 — Avr. 2025",
-    exp2_b1: "Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI",
-    exp2_b2: "Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)",
-    exp2_b3: "Intégration agile, revue de code et participation aux sprints de livraison",
-
-    cert_label: "// certifications",
-    cert_title: "Certifications",
-    cert_verify: "↗ Vérifier le certificat",
-
-    contact_label: "// contact",
-    contact_title: "Travaillons<br>ensemble.",
-    contact_desc: "Ouvert à de nouvelles opportunités — que ce soit un poste full-time, du freelance ou une collaboration sur un projet ambitieux.",
-    form_name: "NOM",
-    form_email: "EMAIL",
-    form_subject: "SUJET",
-    form_subject_ph: "Opportunité / Projet / Collaboration",
-    form_message: "MESSAGE",
-    form_message_ph: "Décrivez votre projet ou opportunité...",
-    form_send: "Envoyer le message",
-    form_success: "// Merci ! Je vous répondrai dans les plus brefs délais.",
-
-    footer: "Construit avec passion depuis Antananarivo 🇲🇬"
-  },
-  en: {
-    nav_home: "Home",
-    nav_about: "About",
-    nav_skills: "Skills",
-    nav_projects: "Projects",
-    nav_experience: "Experience",
-    nav_certs: "Certifications",
-    nav_contact: "Contact",
-    theme_light: "Light mode",
-    theme_dark: "Dark mode",
-    lang_btn: "🌐 Français",
-
-    hero_tag: "Available · Open to opportunities",
-    hero_title: "Full-Stack Developer · Angular & NestJS",
-    hero_desc: "Specialized in Angular, NestJS and NX Monorepo architectures. I build high-performance applications using modern patterns (CQRS, DDD) for international clients.",
-    hero_cta1: "View my projects →",
-    hero_cta2: "Contact me",
-    hero_cv: "⬇ Download CV",
-    stat1: "YR EXP.",
-    stat2: "PROJECTS",
-    stat3: "CERTS",
-    stat4: "TECHS",
-
-    about_label: "// about",
-    about_title: "Why I code",
-    about_p1: "I discovered programming with a simple conviction: code is the most powerful tool to turn ideas into reality. What drives me is building systems that <strong style='color:var(--text)'>actually work</strong> — not just in demos, but in production with real users.",
-    about_p2: "At Orchis International, I had the chance to work on <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> from the very start of my career — an ambitious project with clients like Air France. It taught me that code quality is not optional.",
-    about_p3: "I'm constantly learning — modern architectures, advanced patterns, new frameworks. My goal: become a developer capable of designing <strong style='color:var(--text)'>scalable and maintainable</strong> systems at scale.",
-    about_card1_title: "Result-driven",
-    about_card1_desc: "I deliver clean, tested and documented code — not just code that \"works on my machine\".",
-    about_card2_title: "Architecture first",
-    about_card2_desc: "CQRS, DDD, NX Monorepo — I think about structure before writing the first line.",
-    about_card3_title: "International vision",
-    about_card3_desc: "Working on globally impactful projects from Madagascar — that's my ambition.",
-
-    skills_label: "// skills",
-    skills_title: "Tech stack",
-
-    projects_label: "// projects",
-    projects_title: "What I've built",
-    proj1_desc: "School management application — assessments, periods, student tracking and report exports. Modern and intuitive interface.",
-    proj2_desc: "Mobile streaming app for Malagasy films — catalog, subscriptions, JWT authentication and mobile-first interface.",
-    proj3_desc: "REST API for a vehicle marketplace — listing management, favorites system and commissions. Clean and scalable architecture.",
-    proj_link: "View on GitHub →",
-
-    exp_label: "// experience",
-    exp_title: "Professional journey",
-    exp1_title: "Full-Stack Developer",
-    exp1_date: "May 2025 — Present",
-    exp1_b1: "Front-end (Angular) and back-end (NestJS) development of <strong>QOLEE-TMS-AI</strong> — intelligent transport management and logistics tracking system",
-    exp1_b2: "Project with major clients: <strong>Warning</strong> and <strong>Air France</strong>",
-    exp1_b3: "NX Monorepo architecture with <strong>CQRS</strong> and <strong>DDD</strong> patterns for scalability and maintainability",
-    exp1_b4: "E2E testing with <strong>Playwright</strong> and CI/CD pipelines via GitHub Actions",
-    exp2_title: "Intern — Web & Mobile Development",
-    exp2_date: "Oct. 2024 — Apr. 2025",
-    exp2_b1: "Skill development on Angular and active contribution to QOLEE-TMS-AI",
-    exp2_b2: "Algorithmic deepening through the <strong>France IOI</strong> program (C language)",
-    exp2_b3: "Agile integration, code reviews and sprint delivery participation",
-
-    cert_label: "// certifications",
-    cert_title: "Certifications",
-    cert_verify: "↗ Verify certificate",
-
-    contact_label: "// contact",
-    contact_title: "Let's work<br>together.",
-    contact_desc: "Open to new opportunities — whether it's a full-time position, freelance work or collaboration on an ambitious project.",
-    form_name: "NAME",
-    form_email: "EMAIL",
-    form_subject: "SUBJECT",
-    form_subject_ph: "Opportunity / Project / Collaboration",
-    form_message: "MESSAGE",
-    form_message_ph: "Describe your project or opportunity...",
-    form_send: "Send message",
-    form_success: "// Thank you! I'll get back to you as soon as possible.",
-
-    footer: "Built with passion from Antananarivo 🇲🇬"
-  }
-};
-
-let currentLang = 'fr';
-
-function toggleLang() {
-  currentLang = currentLang === 'fr' ? 'en' : 'fr';
-  applyTranslations();
-}
-
-function applyTranslations() {
-  const t = translations[currentLang];
-  const set = (id, text) => { const el = document.getElementById(id); if(el) el.textContent = text; };
-  const setHTML = (id, html) => { const el = document.getElementById(id); if(el) el.innerHTML = html; };
-  const setAttr = (id, attr, val) => { const el = document.getElementById(id); if(el) el[attr] = val; };
-
-  // Lang button
-  set('langBtn', t.lang_btn);
-
-  // Nav
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const navKeys = ['nav_home','nav_about','nav_skills','nav_projects','nav_experience','nav_certs','nav_contact'];
-  navLinks.forEach((link, i) => { if(navKeys[i] && t[navKeys[i]]) link.textContent = t[navKeys[i]]; });
-
-  // Hero
-  set('hero-tag', t.hero_tag);
-  set('hero-title', t.hero_title);
-  set('hero-desc', t.hero_desc);
-  set('hero-cta1', t.hero_cta1);
-  set('hero-cta2', t.hero_cta2);
-  set('hero-cv', t.hero_cv);
-  const stats = document.querySelectorAll('.stat-label');
-  if(stats[0]) stats[0].textContent = t.stat1;
-  if(stats[1]) stats[1].textContent = t.stat2;
-  if(stats[2]) stats[2].textContent = t.stat3;
-  if(stats[3]) stats[3].textContent = t.stat4;
-
-  // About
-  set('about-label', t.about_label);
-  set('about-title', t.about_title);
-  setHTML('about-p1', t.about_p1);
-  setHTML('about-p2', t.about_p2);
-  setHTML('about-p3', t.about_p3);
-  set('about-card1-title', t.about_card1_title);
-  set('about-card1-desc', t.about_card1_desc);
-  set('about-card2-title', t.about_card2_title);
-  set('about-card2-desc', t.about_card2_desc);
-  set('about-card3-title', t.about_card3_title);
-  set('about-card3-desc', t.about_card3_desc);
-
-  // Skills
-  set('skills-label', t.skills_label);
-  set('skills-title', t.skills_title);
-
-  // Projects
-  set('projects-label', t.projects_label);
-  set('projects-title', t.projects_title);
-  set('proj1-desc', t.proj1_desc);
-  set('proj2-desc', t.proj2_desc);
-  set('proj3-desc', t.proj3_desc);
-  document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
-
-  // Experience
-  set('exp-label', t.exp_label);
-  set('exp-title', t.exp_title);
-  set('exp1-title', t.exp1_title);
-  set('exp1-date', t.exp1_date);
-  setHTML('exp1-b1', t.exp1_b1);
-  setHTML('exp1-b2', t.exp1_b2);
-  setHTML('exp1-b3', t.exp1_b3);
-  setHTML('exp1-b4', t.exp1_b4);
-  set('exp2-title', t.exp2_title);
-  set('exp2-date', t.exp2_date);
-  setHTML('exp2-b1', t.exp2_b1);
-  setHTML('exp2-b2', t.exp2_b2);
-  setHTML('exp2-b3', t.exp2_b3);
-
-  // Certifications
-  set('cert-label', t.cert_label);
-  set('cert-title', t.cert_title);
-  document.querySelectorAll('.cert-link').forEach(l => l.textContent = t.cert_verify);
-
-  // Contact
-  set('contact-label', t.contact_label);
-  setHTML('contact-title', t.contact_title);
-  set('contact-desc', t.contact_desc);
-  set('form-name', t.form_name);
-  set('form-email-label', t.form_email);
-  set('form-subject-label', t.form_subject);
-  setAttr('form-subject-input', 'placeholder', t.form_subject_ph);
-  set('form-message-label', t.form_message);
-  setAttr('form-message-input', 'placeholder', t.form_message_ph);
-  const sendBtn = document.getElementById('form-send-btn');
-  if(sendBtn) sendBtn.querySelector('span').textContent = t.form_send;
-  set('footer-text', t.footer);
-
-  // Theme button
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const themeBtn = document.getElementById('themeBtn');
-  if(themeBtn) themeBtn.innerHTML = isDark
-    ? '<span id="themeIcon">☀️</span> ' + t.theme_light
-    : '<span id="themeIcon">🌙</span> ' + t.theme_dark;
-}
-</script>
 </head>
 <body>
 
@@ -1070,7 +812,7 @@ function applyTranslations() {
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div style="display:flex;gap:8px;align-items:center;">
-  <button class="theme-toggle" onclick="toggleLang()" id="langBtn" style="border-color:var(--teal);color:var(--teal);">
+  <button class="theme-toggle" id="langBtn" style="border-color:var(--teal);color:var(--teal);">
     🌐 English
   </button>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
@@ -1545,6 +1287,275 @@ window.addEventListener('scroll', () => {
 </script>
 
 
+
+
+<script>
+
+const translations = {
+  fr: {
+    nav_home: "Accueil",
+    nav_about: "À propos",
+    nav_skills: "Compétences",
+    nav_projects: "Projets",
+    nav_experience: "Expérience",
+    nav_certs: "Certifications",
+    nav_contact: "Contact",
+    theme_light: "Mode clair",
+    theme_dark: "Mode sombre",
+    lang_btn: "🌐 English",
+
+    hero_tag: "Disponible · Ouvert aux opportunités",
+    hero_title: "Développeur Full-Stack · Angular & NestJS",
+    hero_desc: "Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.",
+    hero_cta1: "Voir mes projets →",
+    hero_cta2: "Me contacter",
+    hero_cv: "⬇ Télécharger CV",
+    stat1: "AN D'EXP.",
+    stat2: "PROJETS",
+    stat3: "CERTIFS",
+    stat4: "TECHNOS",
+
+    about_label: "// à propos",
+    about_title: "Pourquoi je code",
+    about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style='color:var(--text)'>fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.",
+    about_p2: "<span id="about-p2">Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
+    about_p3: "<span id="about-p3">Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong> à grande échelle.",
+    about_card1_title: "Orienté résultat",
+    about_card1_desc: "Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".",
+    about_card2_title: "Architecte avant tout",
+    about_card2_desc: "CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.",
+    about_card3_title: "Vision internationale",
+    about_card3_desc: "Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.",
+
+    skills_label: "// compétences",
+    skills_title: "Stack technique",
+
+    projects_label: "// projets",
+    projects_title: "Ce que j'ai construit",
+    proj1_desc: "Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.",
+    proj2_desc: "Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.",
+    proj3_desc: "API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.",
+    proj_link: "Voir sur GitHub →",
+
+    exp_label: "// expérience",
+    exp_title: "Parcours professionnel",
+    exp1_title: "Développeur Full-Stack",
+    exp1_date: "Mai 2025 — Aujourd'hui",
+    exp1_b1: "Développement front-end (Angular) et back-end (NestJS) du système <strong>QOLEE-TMS-AI</strong> — gestion intelligente du transport et suivi logistique",
+    exp1_b2: "Projet avec clients majeurs : <strong>Warning</strong> et <strong>Air France</strong>",
+    exp1_b3: "Architecture NX Monorepo avec patterns <strong>CQRS</strong> et <strong>DDD</strong> pour scalabilité et maintenabilité",
+    exp1_b4: "Tests E2E avec <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions",
+    exp2_title: "Stagiaire — Développement Web & Mobile",
+    exp2_date: "Oct. 2024 — Avr. 2025",
+    exp2_b1: "Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI",
+    exp2_b2: "Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)",
+    exp2_b3: "Intégration agile, revue de code et participation aux sprints de livraison",
+
+    cert_label: "// certifications",
+    cert_title: "Certifications",
+    cert_verify: "↗ Vérifier le certificat",
+
+    contact_label: "// contact",
+    contact_title: "Travaillons<br>ensemble.",
+    contact_desc: "Ouvert à de nouvelles opportunités — que ce soit un poste full-time, du freelance ou une collaboration sur un projet ambitieux.",
+    form_name: "NOM",
+    form_email: "EMAIL",
+    form_subject: "SUJET",
+    form_subject_ph: "Opportunité / Projet / Collaboration",
+    form_message: "MESSAGE",
+    form_message_ph: "Décrivez votre projet ou opportunité...",
+    form_send: "Envoyer le message",
+    form_success: "// Merci ! Je vous répondrai dans les plus brefs délais.",
+
+    footer: "Construit avec passion depuis Antananarivo 🇲🇬"
+  },
+  en: {
+    nav_home: "Home",
+    nav_about: "About",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_experience: "Experience",
+    nav_certs: "Certifications",
+    nav_contact: "Contact",
+    theme_light: "Light mode",
+    theme_dark: "Dark mode",
+    lang_btn: "🌐 Français",
+
+    hero_tag: "Available · Open to opportunities",
+    hero_title: "Full-Stack Developer · Angular & NestJS",
+    hero_desc: "Specialized in Angular, NestJS and NX Monorepo architectures. I build high-performance applications using modern patterns (CQRS, DDD) for international clients.",
+    hero_cta1: "View my projects →",
+    hero_cta2: "Contact me",
+    hero_cv: "⬇ Download CV",
+    stat1: "YR EXP.",
+    stat2: "PROJECTS",
+    stat3: "CERTS",
+    stat4: "TECHS",
+
+    about_label: "// about",
+    about_title: "Why I code",
+    about_p1: "I discovered programming with a simple conviction: code is the most powerful tool to turn ideas into reality. What drives me is building systems that <strong style='color:var(--text)'>actually work</strong> — not just in demos, but in production with real users.",
+    about_p2: "At Orchis International, I had the chance to work on <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> from the very start of my career — an ambitious project with clients like Air France. It taught me that code quality is not optional.",
+    about_p3: "I'm constantly learning — modern architectures, advanced patterns, new frameworks. My goal: become a developer capable of designing <strong style='color:var(--text)'>scalable and maintainable</strong> systems at scale.",
+    about_card1_title: "Result-driven",
+    about_card1_desc: "I deliver clean, tested and documented code — not just code that \"works on my machine\".",
+    about_card2_title: "Architecture first",
+    about_card2_desc: "CQRS, DDD, NX Monorepo — I think about structure before writing the first line.",
+    about_card3_title: "International vision",
+    about_card3_desc: "Working on globally impactful projects from Madagascar — that's my ambition.",
+
+    skills_label: "// skills",
+    skills_title: "Tech stack",
+
+    projects_label: "// projects",
+    projects_title: "What I've built",
+    proj1_desc: "School management application — assessments, periods, student tracking and report exports. Modern and intuitive interface.",
+    proj2_desc: "Mobile streaming app for Malagasy films — catalog, subscriptions, JWT authentication and mobile-first interface.",
+    proj3_desc: "REST API for a vehicle marketplace — listing management, favorites system and commissions. Clean and scalable architecture.",
+    proj_link: "View on GitHub →",
+
+    exp_label: "// experience",
+    exp_title: "Professional journey",
+    exp1_title: "Full-Stack Developer",
+    exp1_date: "May 2025 — Present",
+    exp1_b1: "Front-end (Angular) and back-end (NestJS) development of <strong>QOLEE-TMS-AI</strong> — intelligent transport management and logistics tracking system",
+    exp1_b2: "Project with major clients: <strong>Warning</strong> and <strong>Air France</strong>",
+    exp1_b3: "NX Monorepo architecture with <strong>CQRS</strong> and <strong>DDD</strong> patterns for scalability and maintainability",
+    exp1_b4: "E2E testing with <strong>Playwright</strong> and CI/CD pipelines via GitHub Actions",
+    exp2_title: "Intern — Web & Mobile Development",
+    exp2_date: "Oct. 2024 — Apr. 2025",
+    exp2_b1: "Skill development on Angular and active contribution to QOLEE-TMS-AI",
+    exp2_b2: "Algorithmic deepening through the <strong>France IOI</strong> program (C language)",
+    exp2_b3: "Agile integration, code reviews and sprint delivery participation",
+
+    cert_label: "// certifications",
+    cert_title: "Certifications",
+    cert_verify: "↗ Verify certificate",
+
+    contact_label: "// contact",
+    contact_title: "Let's work<br>together.",
+    contact_desc: "Open to new opportunities — whether it's a full-time position, freelance work or collaboration on an ambitious project.",
+    form_name: "NAME",
+    form_email: "EMAIL",
+    form_subject: "SUBJECT",
+    form_subject_ph: "Opportunity / Project / Collaboration",
+    form_message: "MESSAGE",
+    form_message_ph: "Describe your project or opportunity...",
+    form_send: "Send message",
+    form_success: "// Thank you! I'll get back to you as soon as possible.",
+
+    footer: "Built with passion from Antananarivo 🇲🇬"
+  }
+};
+
+let currentLang = 'fr';
+
+function toggleLang() {
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  applyTranslations();
+}
+
+function applyTranslations() {
+  const t = translations[currentLang];
+  const set = (id, text) => { const el = document.getElementById(id); if(el) el.textContent = text; };
+  const setHTML = (id, html) => { const el = document.getElementById(id); if(el) el.innerHTML = html; };
+  const setAttr = (id, attr, val) => { const el = document.getElementById(id); if(el) el[attr] = val; };
+
+  // Lang button
+  set('langBtn', t.lang_btn);
+
+  // Nav
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const navKeys = ['nav_home','nav_about','nav_skills','nav_projects','nav_experience','nav_certs','nav_contact'];
+  navLinks.forEach((link, i) => { if(navKeys[i] && t[navKeys[i]]) link.textContent = t[navKeys[i]]; });
+
+  // Hero
+  set('hero-tag', t.hero_tag);
+  set('hero-title', t.hero_title);
+  set('hero-desc', t.hero_desc);
+  set('hero-cta1', t.hero_cta1);
+  set('hero-cta2', t.hero_cta2);
+  set('hero-cv', t.hero_cv);
+  const stats = document.querySelectorAll('.stat-label');
+  if(stats[0]) stats[0].textContent = t.stat1;
+  if(stats[1]) stats[1].textContent = t.stat2;
+  if(stats[2]) stats[2].textContent = t.stat3;
+  if(stats[3]) stats[3].textContent = t.stat4;
+
+  // About
+  set('about-label', t.about_label);
+  set('about-title', t.about_title);
+  setHTML('about-p1', t.about_p1);
+  setHTML('about-p2', t.about_p2);
+  setHTML('about-p3', t.about_p3);
+  set('about-card1-title', t.about_card1_title);
+  set('about-card1-desc', t.about_card1_desc);
+  set('about-card2-title', t.about_card2_title);
+  set('about-card2-desc', t.about_card2_desc);
+  set('about-card3-title', t.about_card3_title);
+  set('about-card3-desc', t.about_card3_desc);
+
+  // Skills
+  set('skills-label', t.skills_label);
+  set('skills-title', t.skills_title);
+
+  // Projects
+  set('projects-label', t.projects_label);
+  set('projects-title', t.projects_title);
+  set('proj1-desc', t.proj1_desc);
+  set('proj2-desc', t.proj2_desc);
+  set('proj3-desc', t.proj3_desc);
+  document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
+
+  // Experience
+  set('exp-label', t.exp_label);
+  set('exp-title', t.exp_title);
+  set('exp1-title', t.exp1_title);
+  set('exp1-date', t.exp1_date);
+  setHTML('exp1-b1', t.exp1_b1);
+  setHTML('exp1-b2', t.exp1_b2);
+  setHTML('exp1-b3', t.exp1_b3);
+  setHTML('exp1-b4', t.exp1_b4);
+  set('exp2-title', t.exp2_title);
+  set('exp2-date', t.exp2_date);
+  setHTML('exp2-b1', t.exp2_b1);
+  setHTML('exp2-b2', t.exp2_b2);
+  setHTML('exp2-b3', t.exp2_b3);
+
+  // Certifications
+  set('cert-label', t.cert_label);
+  set('cert-title', t.cert_title);
+  document.querySelectorAll('.cert-link').forEach(l => l.textContent = t.cert_verify);
+
+  // Contact
+  set('contact-label', t.contact_label);
+  setHTML('contact-title', t.contact_title);
+  set('contact-desc', t.contact_desc);
+  set('form-name', t.form_name);
+  set('form-email-label', t.form_email);
+  set('form-subject-label', t.form_subject);
+  setAttr('form-subject-input', 'placeholder', t.form_subject_ph);
+  set('form-message-label', t.form_message);
+  setAttr('form-message-input', 'placeholder', t.form_message_ph);
+  const sendBtn = document.getElementById('form-send-btn');
+  if(sendBtn) sendBtn.querySelector('span').textContent = t.form_send;
+  set('footer-text', t.footer);
+
+  // Theme button
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const themeBtn = document.getElementById('themeBtn');
+  if(themeBtn) themeBtn.innerHTML = isDark
+    ? '<span id="themeIcon">☀️</span> ' + t.theme_light
+    : '<span id="themeIcon">🌙</span> ' + t.theme_dark;
+}
+
+
+// Wire up lang button after DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+  const langBtn = document.getElementById('langBtn');
+  if(langBtn) langBtn.addEventListener('click', toggleLang);
+});
+</script>
 
 </body>
 </html>
