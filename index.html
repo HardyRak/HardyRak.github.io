@@ -873,32 +873,32 @@ footer {
           <span id="about-p1">J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style="color:var(--text)">fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.
         </p>
         <p style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px;">
-          Chez Orchis International, j'ai eu la chance de travailler sur <strong style="color:var(--text)">QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.
+          <span id="about-p2">Chez Orchis International, j'ai eu la chance de travailler sur <strong style="color:var(--text)">QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.</span>
         </p>
         <p style="font-size:15px;color:var(--text2);line-height:1.8;">
-          Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style="color:var(--text)">scalables et maintenables</strong> à grande échelle.
+          <span id="about-p3">Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style="color:var(--text)">scalables et maintenables</strong> à grande échelle.</span>
         </p>
       </div>
       <div class="reveal" style="display:flex;flex-direction:column;gap:16px;">
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
           <div style="font-size:28px;">🎯</div>
           <div>
-            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Orienté résultat</div>
-            <div style="font-size:13px;color:var(--text2);">Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".</div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card1-title">Orienté résultat</div>
+            <div style="font-size:13px;color:var(--text2);" id="about-card1-desc">Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
           <div style="font-size:28px;">🏗️</div>
           <div>
-            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Architecte avant tout</div>
-            <div style="font-size:13px;color:var(--text2);">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card2-title">Architecte avant tout</div>
+            <div style="font-size:13px;color:var(--text2);" id="about-card2-desc">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
           <div style="font-size:28px;">🌍</div>
           <div>
-            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;">Vision internationale</div>
-            <div style="font-size:13px;color:var(--text2);">Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.</div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card3-title">Vision internationale</div>
+            <div style="font-size:13px;color:var(--text2);" id="about-card3-desc">Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.</div>
           </div>
         </div>
       </div>
@@ -1180,7 +1180,7 @@ footer {
 
 <!-- ── FOOTER ── -->
 <footer>
-  <span style="color:var(--teal)">MH</span> · Manoela Hardy Rakotonarivo · Antananarivo, Madagascar · {}</span>
+  <span style="color:var(--teal)">MH</span> · Manoela Hardy Rakotonarivo · <span id="footer-text">Construit avec passion depuis Antananarivo 🇲🇬</span>
 </footer>
 
 <script>
@@ -1313,8 +1313,8 @@ const translations = {
     about_label: "// à propos",
     about_title: "Pourquoi je code",
     about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style='color:var(--text)'>fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.",
-    about_p2: "Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
-    about_p3: "Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong> à grande échelle.",
+    about_p2: "<span id="about-p2">Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
+    about_p3: "<span id="about-p3">Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong> à grande échelle.",
     about_card1_title: "Orienté résultat",
     about_card1_desc: "Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".",
     about_card2_title: "Architecte avant tout",
@@ -1452,89 +1452,96 @@ function toggleLang() {
 
 function applyTranslations() {
   const t = translations[currentLang];
-  
+  const set = (id, text) => { const el = document.getElementById(id); if(el) el.textContent = text; };
+  const setHTML = (id, html) => { const el = document.getElementById(id); if(el) el.innerHTML = html; };
+  const setAttr = (id, attr, val) => { const el = document.getElementById(id); if(el) el[attr] = val; };
+
+  // Lang button
+  set('langBtn', t.lang_btn);
+
   // Nav
-  document.getElementById('langBtn').innerHTML = t.lang_btn;
   const navLinks = document.querySelectorAll('.nav-links a');
   const navKeys = ['nav_home','nav_about','nav_skills','nav_projects','nav_experience','nav_certs','nav_contact'];
-  navLinks.forEach((link, i) => { if(navKeys[i]) link.textContent = t[navKeys[i]]; });
+  navLinks.forEach((link, i) => { if(navKeys[i] && t[navKeys[i]]) link.textContent = t[navKeys[i]]; });
 
   // Hero
-  document.getElementById('hero-tag').textContent = t.hero_tag;
-  document.getElementById('hero-title').textContent = t.hero_title;
-  document.getElementById('hero-desc').textContent = t.hero_desc;
-  document.getElementById('hero-cta1').textContent = t.hero_cta1;
-  document.getElementById('hero-cta2').textContent = t.hero_cta2;
-  document.getElementById('hero-cv').textContent = t.hero_cv;
-  document.querySelectorAll('.stat-label')[0].textContent = t.stat1;
-  document.querySelectorAll('.stat-label')[1].textContent = t.stat2;
-  document.querySelectorAll('.stat-label')[2].textContent = t.stat3;
-  document.querySelectorAll('.stat-label')[3].textContent = t.stat4;
+  set('hero-tag', t.hero_tag);
+  set('hero-title', t.hero_title);
+  set('hero-desc', t.hero_desc);
+  set('hero-cta1', t.hero_cta1);
+  set('hero-cta2', t.hero_cta2);
+  set('hero-cv', t.hero_cv);
+  const stats = document.querySelectorAll('.stat-label');
+  if(stats[0]) stats[0].textContent = t.stat1;
+  if(stats[1]) stats[1].textContent = t.stat2;
+  if(stats[2]) stats[2].textContent = t.stat3;
+  if(stats[3]) stats[3].textContent = t.stat4;
 
   // About
-  document.getElementById('about-label').textContent = t.about_label;
-  document.getElementById('about-title').textContent = t.about_title;
-  document.getElementById('about-p1').innerHTML = t.about_p1;
-  document.getElementById('about-p2').innerHTML = t.about_p2;
-  document.getElementById('about-p3').innerHTML = t.about_p3;
-  document.getElementById('about-card1-title').textContent = t.about_card1_title;
-  document.getElementById('about-card1-desc').textContent = t.about_card1_desc;
-  document.getElementById('about-card2-title').textContent = t.about_card2_title;
-  document.getElementById('about-card2-desc').textContent = t.about_card2_desc;
-  document.getElementById('about-card3-title').textContent = t.about_card3_title;
-  document.getElementById('about-card3-desc').textContent = t.about_card3_desc;
+  set('about-label', t.about_label);
+  set('about-title', t.about_title);
+  setHTML('about-p1', t.about_p1);
+  setHTML('about-p2', t.about_p2);
+  setHTML('about-p3', t.about_p3);
+  set('about-card1-title', t.about_card1_title);
+  set('about-card1-desc', t.about_card1_desc);
+  set('about-card2-title', t.about_card2_title);
+  set('about-card2-desc', t.about_card2_desc);
+  set('about-card3-title', t.about_card3_title);
+  set('about-card3-desc', t.about_card3_desc);
 
   // Skills
-  document.getElementById('skills-label').textContent = t.skills_label;
-  document.getElementById('skills-title').textContent = t.skills_title;
+  set('skills-label', t.skills_label);
+  set('skills-title', t.skills_title);
 
   // Projects
-  document.getElementById('projects-label').textContent = t.projects_label;
-  document.getElementById('projects-title').textContent = t.projects_title;
-  document.getElementById('proj1-desc').textContent = t.proj1_desc;
-  document.getElementById('proj2-desc').textContent = t.proj2_desc;
-  document.getElementById('proj3-desc').textContent = t.proj3_desc;
+  set('projects-label', t.projects_label);
+  set('projects-title', t.projects_title);
+  set('proj1-desc', t.proj1_desc);
+  set('proj2-desc', t.proj2_desc);
+  set('proj3-desc', t.proj3_desc);
   document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
 
   // Experience
-  document.getElementById('exp-label').textContent = t.exp_label;
-  document.getElementById('exp-title').textContent = t.exp_title;
-  document.getElementById('exp1-title').textContent = t.exp1_title;
-  document.getElementById('exp1-date').textContent = t.exp1_date;
-  document.getElementById('exp1-b1').innerHTML = t.exp1_b1;
-  document.getElementById('exp1-b2').innerHTML = t.exp1_b2;
-  document.getElementById('exp1-b3').innerHTML = t.exp1_b3;
-  document.getElementById('exp1-b4').innerHTML = t.exp1_b4;
-  document.getElementById('exp2-title').textContent = t.exp2_title;
-  document.getElementById('exp2-date').textContent = t.exp2_date;
-  document.getElementById('exp2-b1').innerHTML = t.exp2_b1;
-  document.getElementById('exp2-b2').innerHTML = t.exp2_b2;
-  document.getElementById('exp2-b3').innerHTML = t.exp2_b3;
+  set('exp-label', t.exp_label);
+  set('exp-title', t.exp_title);
+  set('exp1-title', t.exp1_title);
+  set('exp1-date', t.exp1_date);
+  setHTML('exp1-b1', t.exp1_b1);
+  setHTML('exp1-b2', t.exp1_b2);
+  setHTML('exp1-b3', t.exp1_b3);
+  setHTML('exp1-b4', t.exp1_b4);
+  set('exp2-title', t.exp2_title);
+  set('exp2-date', t.exp2_date);
+  setHTML('exp2-b1', t.exp2_b1);
+  setHTML('exp2-b2', t.exp2_b2);
+  setHTML('exp2-b3', t.exp2_b3);
 
   // Certifications
-  document.getElementById('cert-label').textContent = t.cert_label;
-  document.getElementById('cert-title').textContent = t.cert_title;
+  set('cert-label', t.cert_label);
+  set('cert-title', t.cert_title);
   document.querySelectorAll('.cert-link').forEach(l => l.textContent = t.cert_verify);
 
   // Contact
-  document.getElementById('contact-label').textContent = t.contact_label;
-  document.getElementById('contact-title').innerHTML = t.contact_title;
-  document.getElementById('contact-desc').textContent = t.contact_desc;
-  document.getElementById('form-name').textContent = t.form_name;
-  document.getElementById('form-email-label').textContent = t.form_email;
-  document.getElementById('form-subject-label').textContent = t.form_subject;
-  document.getElementById('form-subject-input').placeholder = t.form_subject_ph;
-  document.getElementById('form-message-label').textContent = t.form_message;
-  document.getElementById('form-message-input').placeholder = t.form_message_ph;
-  document.getElementById('form-send-btn').querySelector('span').textContent = t.form_send;
-  document.getElementById('footer-text').textContent = t.footer;
+  set('contact-label', t.contact_label);
+  setHTML('contact-title', t.contact_title);
+  set('contact-desc', t.contact_desc);
+  set('form-name', t.form_name);
+  set('form-email-label', t.form_email);
+  set('form-subject-label', t.form_subject);
+  setAttr('form-subject-input', 'placeholder', t.form_subject_ph);
+  set('form-message-label', t.form_message);
+  setAttr('form-message-input', 'placeholder', t.form_message_ph);
+  const sendBtn = document.getElementById('form-send-btn');
+  if(sendBtn) sendBtn.querySelector('span').textContent = t.form_send;
+  set('footer-text', t.footer);
 
   // Theme button
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const themeBtn = document.getElementById('themeBtn');
-  themeBtn.innerHTML = isDark 
-    ? `<span id="themeIcon">☀️</span> ${t.theme_light}`
-    : `<span id="themeIcon">🌙</span> ${t.theme_dark}`;
+  if(themeBtn) themeBtn.innerHTML = isDark
+    ? '<span id="themeIcon">☀️</span> ' + t.theme_light
+    : '<span id="themeIcon">🌙</span> ' + t.theme_dark;
 }
 </script>
 
