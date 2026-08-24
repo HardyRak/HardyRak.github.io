@@ -30,7 +30,12 @@
   .lang-row { display: flex; justify-content: space-between; font-size: 9px; margin-bottom: 1.5mm; }
   .cert-name { font-size: 9.5px; font-weight: 600; margin-top: 2mm; }
   .cert-meta { font-size: 8px; color: #9fb3bd; }
-  .cert-link { font-size: 8px; color: #16b3c9; }
+  .cert-link {
+    display: block;
+    font-size: 8px;
+    color: #16b3c9;
+    text-decoration: none;
+  }
 
   .main { flex: 1; padding: 10mm 9mm; background: #ffffff; }
   .main-h { font-size: 10px; letter-spacing: 2px; color: #10202b; border-bottom: 2px solid #16b3c9; padding-bottom: 1.5mm; margin: 0 0 3mm; font-weight: 700; }
@@ -72,26 +77,26 @@
   <div class="side-h">CONTACT</div>
   <div class="side-item">📞 +261 33 71 545 95</div>
   <div class="side-item">✉ hardyrakoto66@gmail.com</div>
-  <div class="side-item">📍 Ambohipanja Ilafy 146 A, Antananarivo</div>
+  <div class="side-item">📍 Antananarivo, Madagascar</div>
   <div class="side-item">💻 github.com/HardyRak</div>
   <div class="side-item">🔗 LinkedIn — Manoela Hardy</div>
 
   <div class="side-h">COMPÉTENCES</div>
-  <!-- skill bars synced with portfolio index.html -->
-  <div class="skill-row"><div class="skill-name-row"><span>Angular</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" style="width:95%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>NestJS</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>NX Monorepo</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>Git / GitHub</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" style="width:95%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>Java / Spring Boot</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>RxJS / NgRx Signals</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>TypeScript / JS</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>PHP</span><span>75%</span></div><div class="skill-track"><div class="skill-fill" style="width:75%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>Ionic</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>Playwright / Tests E2E</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>Docker</span><span>60%</span></div><div class="skill-track"><div class="skill-fill" style="width:60%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>PostgreSQL / MongoDB</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>CQRS</span><span>75%</span></div><div class="skill-track"><div class="skill-fill" style="width:75%"></div></div></div>
-  <div class="skill-row"><div class="skill-name-row"><span>DDD</span><span>75%</span></div><div class="skill-track"><div class="skill-fill" style="width:75%"></div></div></div>
+
+  <div class="skill-row"><div class="skill-name-row"><span>Angular</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>NestJS</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>TypeScript / JavaScript</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>NX Monorepo</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>RxJS / NgRx Signals</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>Java / Spring Boot</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>PHP</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>Ionic</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>MongoDB / PostgreSQL</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>Playwright / Tests E2E</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>CQRS / DDD</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>Git / GitHub</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>Docker</span></div></div>
+  <div class="skill-row"><div class="skill-name-row"><span>GitHub Actions</span></div></div>
 
   <div class="side-h">LANGUES</div>
   <div class="lang-row"><span>Malagasy</span><span>Maternelle</span></div>
@@ -99,88 +104,210 @@
   <div class="lang-row"><span>Anglais</span><span>Notions</span></div>
 
   <div class="side-h">CERTIFICATIONS</div>
-  <div class="cert-name">Angular Foundation</div>
-  <div class="cert-meta">StudySection · Oct. 2025</div>
-  <div class="cert-link">↗ Vérifier</div>
-  <div class="cert-name">Java Programming Foundation</div>
-  <div class="cert-meta">StudySection · Juil. 2024</div>
-  <div class="cert-link">↗ Vérifier</div>
-  <div class="cert-name">Python Foundation</div>
-  <div class="cert-meta">StudySection · Juil. 2024</div>
-  <div class="cert-link">↗ Vérifier</div>
-  <div class="cert-name">C Programming Foundation</div>
-  <div class="cert-meta">StudySection · Oct. 2025</div>
-  <div class="cert-link">↗ Vérifier</div>
-  <div class="cert-name">Anglais Niveau 1</div>
-  <div class="cert-meta">KM Academy</div>
+
+<div class="cert-name">Angular Foundation</div>
+<div class="cert-meta">StudySection · Oct. 2025</div>
+<a
+  href="https://www.studysection.com/users/socialMedia/ODE4ODY5/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cert-link">
+  ↗ Vérifier le certificat
+</a>
+
+<div class="cert-name">Java Programming Foundation</div>
+<div class="cert-meta">StudySection · Juil. 2024</div>
+<a
+  href="https://www.studysection.com/users/socialMedia/NzY3MzMx/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cert-link">
+  ↗ Vérifier le certificat
+</a>
+
+<div class="cert-name">Python Foundation</div>
+<div class="cert-meta">StudySection · Juil. 2024</div>
+<a
+  href="https://www.studysection.com/users/socialMedia/NzY3MzMw/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cert-link">
+  ↗ Vérifier le certificat
+</a>
+
+<div class="cert-name">C Programming Foundation</div>
+<div class="cert-meta">StudySection · Oct. 2025</div>
+<a
+  href="https://www.studysection.com/users/socialMedia/ODE4ODc0/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cert-link">
+  ↗ Vérifier le certificat
+</a>
+
+<div class="cert-name">Anglais Niveau 1</div>
+<div class="cert-meta">KM Academy</div>
 </div>
 
 <div class="main">
+
   <div class="main-h">PROFIL</div>
   <div class="profil-text">
-    Développeur Full-Stack avec près de 2 ans d'expérience professionnelle, spécialisé en <strong>Angular</strong> (front-end) et <strong>NestJS</strong> (back-end) au sein
-    d'architectures NX Monorepo. A contribué au développement de QOLEE-TMS-AI, un système de gestion intelligente
-    du transport pour des clients internationaux dont <strong>Air France</strong>. Rigoureux, orienté qualité et passionné par les architectures logicielles
-    modernes. <span class="highlight">Ouvert à de nouvelles opportunités.</span>
+    Développeur Full-Stack avec près de 2 ans d'expérience professionnelle dans le développement
+    d'applications web. J'ai notamment contribué au développement et à l'évolution de
+    <strong>QOLEE-TMS-AI</strong>, une solution dédiée à la gestion et au suivi des livraisons de colis,
+    dans le cadre de projets impliquant notamment <strong>Air France</strong> et <strong>Warning Group</strong>.
+    Rigoureux, orienté qualité et intéressé par les architectures logicielles modernes.
+    <span class="highlight">Ouvert à de nouvelles opportunités.</span>
   </div>
 
   <div class="main-h">EXPÉRIENCES PROFESSIONNELLES</div>
 
   <div class="job">
-    <div class="job-row"><span class="job-title">Développeur Full-Stack</span><span class="job-date">Mai 2025 — 2026</span></div>
-    <div class="job-company">Orchis International · Antananarivo</div>
-    <div class="tags">
-      <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span>
-      <span class="tag">TypeScript</span><span class="tag">MongoDB</span><span class="tag">CQRS</span><span class="tag">DDD</span>
+    <div class="job-row">
+      <span class="job-title">Développeur Full-Stack</span>
+      <span class="job-date">Mai 2025 — Août 2026</span>
     </div>
+
+    <div class="job-company">Orchis International · Antananarivo</div>
+
+    <div class="tags">
+      <span class="tag">Angular</span>
+      <span class="tag">NestJS</span>
+      <span class="tag">NX</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">CQRS</span>
+      <span class="tag">DDD</span>
+    </div>
+
     <ul class="job-list">
-      <li>Développement full-stack de <strong>QOLEE-TMS-AI</strong> (gestion intelligente du transport) — <strong>~2 000 commits en production</strong> au sein d'une équipe de 25 développeurs</li>
-      <li>Projet en production pour des clients majeurs : <strong>Warning</strong> et <strong>Air France</strong></li>
-      <li>Projections read-model <strong>CQRS/DDD</strong> avec MongoDB Change Streams sur les modules demande, exploitation et planification + contribution au package de contrats partagés (DTOs TypeScript)</li>
-      <li>Front Angular avec <strong>NgRx Signals</strong>, tests E2E <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions</li>
+      <li>
+        Contribution au développement et à l'évolution de <strong>QOLEE-TMS-AI</strong>,
+        une solution dédiée à la gestion et au suivi des livraisons de colis,
+        dans le cadre de projets impliquant notamment <strong>Air France</strong>
+        et <strong>Warning Group</strong>.
+      </li>
+
+      <li>
+        Développement de <strong>read-models CQRS</strong> suivant les principes
+        <strong>DDD</strong>, avec <strong>MongoDB Change Streams</strong> sur les modules
+        demande, exploitation et planification, ainsi que contribution aux contrats
+        partagés (<strong>DTOs TypeScript</strong>).
+      </li>
+
+      <li>
+        Développement du front-end <strong>Angular</strong> avec <strong>NgRx Signals</strong>,
+        mise en place de tests E2E avec <strong>Playwright</strong> et contribution aux
+        pipelines <strong>CI/CD GitHub Actions</strong>.
+      </li>
     </ul>
   </div>
 
   <div class="job">
-    <div class="job-row"><span class="job-title">Stagiaire — Développement Web &amp; Mobile</span><span class="job-date">Oct. 2024 — Avr. 2025</span></div>
-    <div class="job-company">Orchis International · Antananarivo</div>
-    <div class="tags">
-      <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span><span class="tag">C / France IOI</span>
+    <div class="job-row">
+      <span class="job-title">Stagiaire — Développement Web &amp; Mobile</span>
+      <span class="job-date">Oct. 2024 — Avr. 2025</span>
     </div>
+
+    <div class="job-company">Orchis International · Antananarivo</div>
+
+    <div class="tags">
+      <span class="tag">Angular</span>
+      <span class="tag">NestJS</span>
+      <span class="tag">NX</span>
+      <span class="tag">C / France IOI</span>
+    </div>
+
     <ul class="job-list">
-      <li>Montée en compétence sur Angular et participation active au développement de QOLEE-TMS-AI</li>
-      <li>Approfondissement algorithmique via le programme France IOI (langage C)</li>
-      <li>Intégration dans une équipe agile, revue de code et contribution aux sprints de livraison</li>
+      <li>
+        Montée en compétence sur Angular et participation active au développement de
+        <strong>QOLEE-TMS-AI</strong>.
+      </li>
+
+      <li>
+        Approfondissement algorithmique via le programme <strong>France IOI</strong>
+        (langage C).
+      </li>
+
+      <li>
+        Intégration dans une équipe agile, revue de code et contribution aux sprints de livraison.
+      </li>
     </ul>
   </div>
 
   <div class="main-h">PROJETS PERSONNELS</div>
+
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-title">Gestion École (EKOLOVA)</div>
-      <div class="project-desc">Application de gestion scolaire — évaluations, périodes, suivi élèves, export rapports</div>
-      <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Playwright</span>
+      <div class="project-desc">
+        Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports.
+      </div>
+      <span class="tag">React</span>
+      <span class="tag">Vite</span>
+      <span class="tag">Playwright</span>
     </div>
+
     <div class="project-card">
       <div class="project-title">MadaMovie</div>
-      <div class="project-desc">Application mobile de streaming — catalogue films, abonnements, authentification JWT</div>
-      <span class="tag">Angular/Ionic</span><span class="tag">Spring Boot</span><span class="tag">Docker</span>
+      <div class="project-desc">
+        Application mobile de streaming — catalogue de films, abonnements et authentification JWT.
+      </div>
+      <span class="tag">Angular/Ionic</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Docker</span>
     </div>
+
     <div class="project-card">
       <div class="project-title">VarotraFiara</div>
-      <div class="project-desc">API REST de marketplace de véhicules — annonces, favoris, commissions</div>
-      <span class="tag">Spring Boot</span><span class="tag">MongoDB</span><span class="tag">Java</span>
+      <div class="project-desc">
+        API REST de marketplace de véhicules — gestion des annonces, favoris et commissions.
+      </div>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">Java</span>
     </div>
   </div>
 
   <div class="main-h">FORMATION</div>
-  <div class="form-row"><div><div class="form-title">Licence 3 en Informatique</div><div class="form-sub">IT University — Andoharanofotsy</div></div><div class="form-date">2021 - 2024</div></div>
-  <div class="form-row"><div><div class="form-title">Licence 1 en Informatique</div><div class="form-sub">CNTEMAD — puis transfert vers IT University (L1 → L3)</div></div><div class="form-date">2021 - 2022</div></div>
-  <div class="form-row"><div><div class="form-title">Baccalauréat</div><div class="form-sub">LTPGC Mahamasina</div></div><div class="form-date">2020</div></div>
+
+  <div class="form-row">
+    <div>
+      <div class="form-title">Licence 3 en Informatique</div>
+      <div class="form-sub">IT University — Andoharanofotsy</div>
+    </div>
+    <div class="form-date">2021 - 2024</div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <div class="form-title">Licence 1 en Informatique</div>
+      <div class="form-sub">CNTEMAD — puis transfert vers IT University</div>
+    </div>
+    <div class="form-date">2021 - 2022</div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <div class="form-title">Baccalauréat</div>
+      <div class="form-sub">LTPGC Mahamasina</div>
+    </div>
+    <div class="form-date">2020</div>
+  </div>
 
   <div class="main-h">OUTILS IA POUR LE DÉVELOPPEMENT</div>
-  <div class="ai-tools"><span class="ai-tag">Claude Code</span><span class="ai-tag">ChatGPT</span></div>
-  <div class="ai-desc">Utilisation avancée de l'IA comme méthode de travail : planification, revue de code, débogage et optimisation via des workflows agentiques.</div>
+
+  <div class="ai-tools">
+    <span class="ai-tag">Claude Code</span>
+    <span class="ai-tag">ChatGPT</span>
+  </div>
+
+  <div class="ai-desc">
+    Utilisation de l'IA comme outil de développement pour la planification,
+    la revue de code, le débogage, le refactoring et l'optimisation des workflows.
+  </div>
+
 </div>
 
 </body>
