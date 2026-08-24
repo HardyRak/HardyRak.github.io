@@ -638,7 +638,6 @@ section {
 
 /* ── CONTACT ── */
 #contact {
-  background: var(--bg2);
   padding: 100px 80px;
   position: relative;
   z-index: 1;
@@ -876,7 +875,7 @@ footer {
       <h1 class="hero-name">Manoela<br><span>Hardy</span><br>Rakotonarivo</h1>
       <p class="hero-title" id="hero-title">Développeur Full-Stack · Angular & NestJS</p>
       <p class="hero-desc" id="hero-desc">
-        Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.
+        Développeur Full-Stack avec près de 2 ans d'expérience sur des applications web professionnelles. J'ai notamment contribué au développement et à l'évolution de QOLEE-TMS-AI, une solution dédiée à la gestion et au suivi des livraisons de colis.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary" id="hero-cta1">Voir mes projets →</a>
@@ -885,12 +884,16 @@ footer {
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <div class="stat-num">1+</div>
-          <div class="stat-label">AN D'EXP.</div>
+          <div class="stat-num">2</div>
+          <div class="stat-label">ANS D'EXP.</div>
         </div>
         <div class="stat">
           <div class="stat-num">3</div>
-          <div class="stat-label">PROJETS</div>
+          <div class="stat-label">PROJETS PERSONNELS</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">1</div>
+          <div class="stat-label">EXPÉRIENCE PROFESSIONNELLE MAJEURE</div>
         </div>
         <div class="stat">
           <div class="stat-num">5</div>
@@ -910,7 +913,7 @@ footer {
 
 
 <!-- ── ABOUT ── -->
-<section id="about" class="about-section">
+<section id="about" class="about-section" style="background:var(--bg2); max-width:100%; padding: 100px 80px;">
   <div style="max-width:1200px;margin:0 auto;">
     <div class="about-grid">
       <div class="reveal">
@@ -937,7 +940,7 @@ footer {
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
           <div style="font-size:28px;">🏗️</div>
           <div>
-            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card2-title">Architecte avant tout</div>
+            <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card2-title">Sensibilité architecture & qualité</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card2-desc">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
           </div>
         </div>
@@ -953,86 +956,65 @@ footer {
   </div>
 </section>
 
-<!-- ── SKILLS ── -->
-<section id="skills">
-  <p class="section-label" id="skills-label">// compétences</p>
-  <h2 class="section-title reveal" id="skills-title">Stack technique</h2>
-  <div class="skills-grid">
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Angular</span><span class="skill-pct">95%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-      <div class="skill-category">FRONT-END</div>
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <p class="section-label" id="exp-label">// expérience</p>
+  <h2 class="section-title reveal" id="exp-title">Parcours professionnel</h2>
+  <div class="timeline">
+
+  <div class="timeline-item reveal">
+    <div class="timeline-header">
+      <div class="timeline-title" id="exp1-title">Développeur Full-Stack</div>
+      <div class="timeline-date" id="exp1-date">Mai 2025 — Août 2026</div>
     </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">NestJS</span><span class="skill-pct">90%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-      <div class="skill-category">BACK-END</div>
+
+    <div class="timeline-company">Orchis International · Antananarivo</div>
+
+    <div class="timeline-tags">
+      <span class="tag">Angular</span>
+      <span class="tag">NestJS</span>
+      <span class="tag">NX</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">CQRS</span>
+      <span class="tag">DDD</span>
     </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">NX Monorepo</span><span class="skill-pct">90%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-      <div class="skill-category">ARCHITECTURE</div>
+
+    <ul class="timeline-bullets">
+      <li id="exp1-b1">
+        Contribution au développement et à l'évolution de <strong>QOLEE-TMS-AI</strong>,
+        une plateforme de gestion intelligente du transport utilisée par des clients internationaux.
+      </li>
+
+      <li id="exp1-b3">
+        Développement de <strong>read-models CQRS</strong> suivant les principes <strong>DDD</strong>,
+        avec <strong>MongoDB Change Streams</strong> sur les modules demande, exploitation et planification,
+        ainsi que contribution aux contrats partagés (<strong>DTOs TypeScript</strong>).
+      </li>
+
+      <li id="exp1-b4">
+        Développement du front-end <strong>Angular</strong> avec <strong>NgRx Signals</strong>,
+        mise en place de tests E2E avec <strong>Playwright</strong> et contribution aux pipelines
+        <strong>CI/CD GitHub Actions</strong>.
+      </li>
+    </ul>
+  </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-header">
+        <div class="timeline-title" id="exp2-title">Stagiaire — Développement Web & Mobile</div>
+        <div class="timeline-date" id="exp2-date">Oct. 2024 — Avr. 2025</div>
+      </div>
+      <div class="timeline-company">Orchis International · Antananarivo</div>
+      <div class="timeline-tags">
+        <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span><span class="tag">C</span>
+      </div>
+      <ul class="timeline-bullets">
+        <li id="exp2-b1">Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI</li>
+        <li id="exp2-b2">Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)</li>
+        <li id="exp2-b3">Intégration agile, revue de code et participation aux sprints de livraison</li>
+      </ul>
     </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Git / GitHub</span><span class="skill-pct">95%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-      <div class="skill-category">DEVOPS</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Java / Spring Boot</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-      <div class="skill-category">BACK-END</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">RxJS / NgRx Signals</span><span class="skill-pct">85%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-      <div class="skill-category">FRONT-END</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Maîtrise de l'IA</span><span class="skill-pct">85%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-      <div class="skill-category">MÉTHODE</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">TypeScript / JS</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-      <div class="skill-category">LANGAGE</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">PHP</span><span class="skill-pct">75%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-      <div class="skill-category">LANGAGE</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Ionic</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-      <div class="skill-category">MOBILE</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Playwright / Tests E2E</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-      <div class="skill-category">TESTING</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">CQRS</span><span class="skill-pct">75%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-      <div class="skill-category">PATTERN</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">DDD</span><span class="skill-pct">75%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-      <div class="skill-category">PATTERN</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">MongoDB / PostgreSQL</span><span class="skill-pct">80%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-      <div class="skill-category">BASE DE DONNÉES</div>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-header"><span class="skill-name">Docker</span><span class="skill-pct">60%</span></div>
-      <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-      <div class="skill-category">DEVOPS</div>
-    </div>
+
   </div>
 </section>
 
@@ -1107,46 +1089,87 @@ footer {
   </div>
 </section>
 
-<!-- ── EXPERIENCE ── -->
-<section id="experience">
-  <p class="section-label" id="exp-label">// expérience</p>
-  <h2 class="section-title reveal" id="exp-title">Parcours professionnel</h2>
-  <div class="timeline">
 
-    <div class="timeline-item reveal">
-      <div class="timeline-header">
-        <div class="timeline-title" id="exp1-title">Développeur Full-Stack</div>
-        <div class="timeline-date" id="exp1-date">Mai 2025 — 2026</div>
-      </div>
-      <div class="timeline-company">Orchis International · Antananarivo</div>
-      <div class="timeline-tags">
-        <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span>
-        <span class="tag">MongoDB</span><span class="tag">CQRS</span><span class="tag">DDD</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li id="exp1-b1">Développement full-stack de <strong>QOLEE-TMS-AI</strong> (gestion intelligente du transport) — <strong>~2 000 commits en production</strong> au sein d'une équipe de 25 développeurs</li>
-        <li id="exp1-b2">Projet en production pour des clients majeurs : <strong>Warning</strong> et <strong>Air France</strong></li>
-        <li id="exp1-b3">Projections read-model <strong>CQRS/DDD</strong> avec MongoDB Change Streams sur les modules demande, exploitation et planification + contribution au package de contrats partagés (DTOs TypeScript)</li>
-        <li id="exp1-b4">Front Angular avec <strong>NgRx Signals</strong>, tests E2E <strong>Playwright</strong> et pipelines CI/CD via GitHub Actions</li>
-      </ul>
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <p class="section-label" id="skills-label">// compétences</p>
+  <h2 class="section-title reveal" id="skills-title">Stack technique</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Angular</span></div>
+      <div class="skill-category">FRONT-END</div>
     </div>
 
-    <div class="timeline-item reveal">
-      <div class="timeline-header">
-        <div class="timeline-title" id="exp2-title">Stagiaire — Développement Web & Mobile</div>
-        <div class="timeline-date" id="exp2-date">Oct. 2024 — Avr. 2025</div>
-      </div>
-      <div class="timeline-company">Orchis International · Antananarivo</div>
-      <div class="timeline-tags">
-        <span class="tag">Angular</span><span class="tag">NestJS</span><span class="tag">NX</span><span class="tag">C</span>
-      </div>
-      <ul class="timeline-bullets">
-        <li id="exp2-b1">Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI</li>
-        <li id="exp2-b2">Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)</li>
-        <li id="exp2-b3">Intégration agile, revue de code et participation aux sprints de livraison</li>
-      </ul>
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">NestJS</span></div>
+      <div class="skill-category">BACK-END</div>
     </div>
 
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">TypeScript / JavaScript</span></div>
+      <div class="skill-category">LANGAGE</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">NX Monorepo</span></div>
+      <div class="skill-category">ARCHITECTURE</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">RxJS / NgRx Signals</span></div>
+      <div class="skill-category">FRONT-END</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Java / Spring Boot</span></div>
+      <div class="skill-category">BACK-END</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">PHP</span></div>
+      <div class="skill-category">BACK-END</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Ionic</span></div>
+      <div class="skill-category">MOBILE</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">MongoDB / PostgreSQL</span></div>
+      <div class="skill-category">BASE DE DONNÉES</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Playwright / Tests E2E</span></div>
+      <div class="skill-category">TESTING</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">CQRS / DDD</span></div>
+      <div class="skill-category">ARCHITECTURE</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Git / GitHub</span></div>
+      <div class="skill-category">VERSIONING</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Docker</span></div>
+      <div class="skill-category">DEVOPS</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">GitHub Actions</span></div>
+      <div class="skill-category">CI/CD</div>
+    </div>
+
+    <div class="skill-card reveal">
+      <div class="skill-header"><span class="skill-name">Outils IA pour le développement</span></div>
+      <div class="skill-category">WORKFLOW</div>
+    </div>
   </div>
 </section>
 
