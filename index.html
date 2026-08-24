@@ -983,15 +983,15 @@ footer {
       <li id="exp1-b1">
         Contribution au développement et à l'évolution de <strong>QOLEE-TMS-AI</strong>,
         une solution dédiée à la gestion et au suivi des livraisons de colis,
-        développée dans le cadre de projets pour des acteurs tels que
-        <strong>Air France</strong> et <strong>Warning Group</strong>.
-      </li>
-
-      <li id="exp1-b1">
-        Contribution au développement et à l'évolution de <strong>QOLEE-TMS-AI</strong>,
-        une solution dédiée à la gestion et au suivi des livraisons de colis,
         dans le cadre de projets impliquant notamment <strong>Air France</strong>
         et <strong>Warning Group</strong>.
+      </li>
+
+      <li id="exp1-b3">
+        Développement de <strong>read-models CQRS</strong> suivant les principes
+        <strong>DDD</strong>, avec <strong>MongoDB Change Streams</strong> sur les modules
+        demande, exploitation et planification, ainsi que contribution aux contrats
+        partagés (<strong>DTOs TypeScript</strong>).
       </li>
 
       <li id="exp1-b4">
@@ -1000,7 +1000,6 @@ footer {
         pipelines <strong>CI/CD GitHub Actions</strong>.
       </li>
     </ul>
-  </div>
 
     <div class="timeline-item reveal">
       <div class="timeline-header">
@@ -1420,9 +1419,8 @@ const translations = {
     lang_btn: '🌐 English',
     hero_tag: 'Disponible · Ouvert aux opportunités',
     hero_title: 'Développeur Full-Stack · Angular & NestJS',
-    hero_desc: 'Spécialisé en Angular, NestJS et architectures NX Monorepo. Je conçois des applications performantes avec des patterns modernes (CQRS, DDD) pour des clients internationaux.',
-    hero_cta1: 'Voir mes projets →', hero_cta2: 'Me contacter', hero_cv: '⬇ Télécharger CV',
-    stat1: "AN D'EXP.", stat2: 'PROJETS', stat3: 'CERTIFS', stat4: 'TECHNOS',
+    hero_desc: "Développeur Full-Stack avec près de 2 ans d'expérience sur des applications web professionnelles. J'ai notamment contribué au développement et à l'évolution de QOLEE-TMS-AI, une solution dédiée à la gestion et au suivi des livraisons de colis.",    hero_cta1: 'Voir mes projets →', hero_cta2: 'Me contacter', hero_cv: '⬇ Télécharger CV',
+    stat1: "AN D'EXP.", stat2: 'PROJETS', stat3:'EXPÉRIENCE PROFESSIONNELLE MAJEURE' ,stat4: 'CERTIFS', stat5: 'TECHNOS',
     about_label: '// à propos', about_title: 'Pourquoi je code',
     about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style=\'color:var(--text)\'>fonctionnent vraiment</strong> — pas juste en démo, mais en production avec de vrais utilisateurs.",
     about_p2: "Chez Orchis International, j'ai eu la chance de travailler sur <strong style=\'color:var(--text)\'>QOLEE-TMS-AI</strong> dès le début de ma carrière — un projet ambitieux avec des clients comme Air France. Ça m'a appris que la qualité du code n'est pas une option.",
@@ -1468,9 +1466,8 @@ const translations = {
     lang_btn: '🌐 Français',
     hero_tag: 'Available · Open to opportunities',
     hero_title: 'Full-Stack Developer · Angular & NestJS',
-    hero_desc: 'Specialized in Angular, NestJS and NX Monorepo architectures. I build high-performance applications using modern patterns (CQRS, DDD) for international clients.',
-    hero_cta1: 'View my projects →', hero_cta2: 'Contact me', hero_cv: '⬇ Download CV',
-    stat1: 'YR EXP.', stat2: 'PROJECTS', stat3: 'CERTS', stat4: 'TECHS',
+    hero_desc: "Full-Stack Developer with nearly 2 years of experience building professional web applications. I notably contributed to the development and evolution of QOLEE-TMS-AI, a solution dedicated to parcel delivery management and tracking.",    hero_cta1: 'View my projects →', hero_cta2: 'Contact me', hero_cv: '⬇ Download CV',
+    stat1: 'YR EXP.', stat2: 'PROJECTS', stat3: 'MAJOR PROFESSIONAL EXPERIENCE', stat4: 'CERTS', stat5: 'TECHS',
     about_label: '// about', about_title: 'Why I code',
     about_p1: "I discovered programming with a simple conviction: code is the most powerful tool to turn ideas into reality. What drives me is building systems that <strong style=\'color:var(--text)\'>actually work</strong> — not just in demos, but in production with real users.",
     about_p2: "At Orchis International, I had the chance to work on <strong style=\'color:var(--text)\'>QOLEE-TMS-AI</strong> from the very start of my career — an ambitious project with clients like Air France. It taught me that code quality is not optional.",
@@ -1532,7 +1529,7 @@ function applyTranslations() {
   set('hero-tag', t.hero_tag); set('hero-title', t.hero_title); set('hero-desc', t.hero_desc);
   set('hero-cta1', t.hero_cta1); set('hero-cta2', t.hero_cta2); set('hero-cv', t.hero_cv);
   const stats = document.querySelectorAll('.stat-label');
-  ['stat1','stat2','stat3','stat4'].forEach((k,i) => { if(stats[i]) stats[i].textContent = t[k]; });
+  ['stat1','stat2','stat3','stat4','stat5'].forEach((k,i) => { if(stats[i]) stats[i].textContent = t[k]; });
 
   set('about-label', t.about_label); set('about-title', t.about_title);
   setHTML('about-p1', t.about_p1); setHTML('about-p2', t.about_p2); setHTML('about-p3', t.about_p3);
