@@ -1,0 +1,90 @@
+
+:root {
+  --bg: #0a0e1a;
+  --bg2: #0f1525;
+  --bg3: #151d35;
+  --surface: #1a2340;
+  --border: rgba(255,255,255,0.08);
+  --teal: #00d4ff;
+  --teal2: #00a8cc;
+  --accent: #ff6b35;
+  --text: #e8edf5;
+  --text2: #8892a4;
+  --text3: #5a6478;
+  --card: rgba(26, 35, 64, 0.8);
+  --glow: rgba(0, 212, 255, 0.15);
+}
+
+[data-theme="light"] {
+  --bg: #f5f7ff;
+  --bg2: #eef1fa;
+  --bg3: #e4e9f5;
+  --surface: #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --teal: #0077b6;
+  --teal2: #005f8e;
+  --accent: #e85d04;
+  --text: #0f1525;
+  --text2: #4a5568;
+  --text3: #8892a4;
+  --card: rgba(255,255,255,0.9);
+  --glow: rgba(0,119,182,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+/* ── NOISE TEXTURE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s;
+}
+
+[data-theme="light"] nav {
+  background: rgba(245, 247, 255, 0.85);
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--teal);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
