@@ -15,833 +15,24 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a1a2e'/><text y='72' x='50' text-anchor='middle' font-size='55' font-family='Arial' font-weight='bold' fill='%2300d4ff'>MH</text></svg>">
 <title>Manoela Hardy — Développeur Full-Stack</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #0a0e1a;
-  --bg2: #0f1525;
-  --bg3: #151d35;
-  --surface: #1a2340;
-  --border: rgba(255,255,255,0.08);
-  --teal: #00d4ff;
-  --teal2: #00a8cc;
-  --accent: #ff6b35;
-  --text: #e8edf5;
-  --text2: #8892a4;
-  --text3: #5a6478;
-  --card: rgba(26, 35, 64, 0.8);
-  --glow: rgba(0, 212, 255, 0.15);
-}
-
-[data-theme="light"] {
-  --bg: #f5f7ff;
-  --bg2: #eef1fa;
-  --bg3: #e4e9f5;
-  --surface: #ffffff;
-  --border: rgba(0,0,0,0.08);
-  --teal: #0077b6;
-  --teal2: #005f8e;
-  --accent: #e85d04;
-  --text: #0f1525;
-  --text2: #4a5568;
-  --text3: #8892a4;
-  --card: rgba(255,255,255,0.9);
-  --glow: rgba(0,119,182,0.1);
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Instrument Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
-  overflow-x: hidden;
-}
-
-/* ── NOISE TEXTURE ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.4;
-}
-
-/* ── NAVBAR ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 16px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(10, 14, 26, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  transition: background 0.3s;
-}
-
-[data-theme="light"] nav {
-  background: rgba(245, 247, 255, 0.85);
-}
-
-.nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  color: var(--teal);
-  letter-spacing: -0.5px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  align-items: center;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text2);
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--teal); }
-
-.theme-toggle {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  padding: 6px 14px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--text2);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s;
-}
-
-.theme-toggle:hover { border-color: var(--teal); color: var(--teal); }
-
-/* ── HERO ── */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 100px 80px 60px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,212,255,0.06) 0%, transparent 70%),
-              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(255,107,53,0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-[data-theme="light"] .hero-bg {
-  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,119,182,0.06) 0%, transparent 70%),
-              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(232,93,4,0.04) 0%, transparent 60%);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 80px;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0,212,255,0.1);
-  border: 1px solid rgba(0,212,255,0.2);
-  border-radius: 50px;
-  padding: 6px 14px;
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--teal);
-  margin-bottom: 24px;
-  animation: fadeInUp 0.6s ease both;
-}
-
-.hero-tag::before {
-  content: '';
-  width: 6px; height: 6px;
-  background: var(--teal);
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.8); }
-}
-
-.hero-name {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -2px;
-  color: var(--text);
-  animation: fadeInUp 0.6s 0.1s ease both;
-}
-
-.hero-name span { color: var(--teal); }
-
-.hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(16px, 2vw, 22px);
-  font-weight: 500;
-  color: var(--text2);
-  margin: 12px 0 20px;
-  animation: fadeInUp 0.6s 0.2s ease both;
-}
-
-.hero-desc {
-  font-size: 15px;
-  color: var(--text2);
-  max-width: 500px;
-  line-height: 1.7;
-  margin-bottom: 36px;
-  animation: fadeInUp 0.6s 0.3s ease both;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.6s 0.4s ease both;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--teal);
-  color: #0a0e1a;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  transition: all 0.2s;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background: var(--teal2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,212,255,0.3);
-}
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--text);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
-  border: 1px solid var(--border);
-  transition: all 0.2s;
-}
-
-.btn-secondary:hover {
-  border-color: var(--teal);
-  color: var(--teal);
-  transform: translateY(-2px);
-}
-
-/* Hero photo */
-.hero-photo-wrap {
-  position: relative;
-  animation: fadeInRight 0.8s 0.2s ease both;
-}
-
-.hero-photo-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, var(--teal), transparent 60%, var(--accent));
-  z-index: 0;
-}
-
-.hero-photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 22px;
-  position: relative;
-  z-index: 1;
-  display: block;
-}
-
-.hero-stats {
-  display: flex;
-  gap: 32px;
-  margin-top: 36px;
-  animation: fadeInUp 0.6s 0.5s ease both;
-}
-
-.stat { text-align: center; }
-.stat-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--teal);
-  line-height: 1;
-}
-.stat-label { font-size: 11px; color: var(--text3); margin-top: 4px; letter-spacing: 0.5px; }
-
-/* ── SECTIONS ── */
-section {
-  padding: 100px 80px;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.section-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--teal);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800;
-  letter-spacing: -1px;
-  color: var(--text);
-  margin-bottom: 48px;
-  line-height: 1.1;
-}
-
-/* ── SKILLS ── */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.skill-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--teal), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.skill-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-3px); box-shadow: 0 12px 32px var(--glow); }
-.skill-card:hover::before { opacity: 1; }
-
-.skill-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-.skill-name { font-weight: 600; font-size: 14px; color: var(--text); }
-.skill-pct {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
-  color: var(--teal);
-  font-weight: 500;
-}
-
-.skill-bar {
-  height: 4px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--teal), var(--teal2));
-  border-radius: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.skill-fill.animated { transform: scaleX(1); }
-
-.skill-category {
-  font-size: 10px;
-  color: var(--text3);
-  font-family: 'JetBrains Mono', monospace;
-  margin-top: 8px;
-  letter-spacing: 0.5px;
-}
-
-/* ── PROJECTS ── */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 24px;
-}
-
-.project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 28px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--teal), var(--accent));
-  transform: scaleX(0);
-  transition: transform 0.3s;
-}
-
-.project-card:hover { border-color: rgba(0,212,255,0.25); transform: translateY(-4px); box-shadow: 0 20px 48px var(--glow); }
-.project-card:hover::after { transform: scaleX(1); }
-
-.project-icon {
-  width: 44px; height: 44px;
-  background: rgba(0,212,255,0.1);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  border: 1px solid rgba(0,212,255,0.2);
-}
-
-.project-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.project-desc {
-  font-size: 13.5px;
-  color: var(--text2);
-  line-height: 1.6;
-  flex: 1;
-}
-
-.project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-.tag {
-  font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
-  background: rgba(0,212,255,0.08);
-  color: var(--teal);
-  border: 1px solid rgba(0,212,255,0.15);
-  padding: 3px 10px;
-  border-radius: 4px;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--teal);
-  text-decoration: none;
-  font-weight: 500;
-  transition: gap 0.2s;
-}
-.project-link:hover { gap: 10px; }
-
-/* ── EXPERIENCE ── */
-.timeline {
-  position: relative;
-  padding-left: 32px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 8px; bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--teal), transparent);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 48px;
-  animation: fadeInLeft 0.6s ease both;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -36px; top: 6px;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--teal);
-  box-shadow: 0 0 0 3px rgba(0,212,255,0.2);
-}
-
-.timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.timeline-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 19px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.timeline-date {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--teal);
-  background: rgba(0,212,255,0.1);
-  padding: 4px 12px;
-  border-radius: 50px;
-  border: 1px solid rgba(0,212,255,0.2);
-}
-
-.timeline-company {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--teal2);
-  margin-bottom: 12px;
-}
-
-.timeline-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-
-.timeline-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.timeline-bullets li {
-  font-size: 14px;
-  color: var(--text2);
-  padding-left: 16px;
-  position: relative;
-  line-height: 1.5;
-}
-
-.timeline-bullets li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--teal);
-  font-size: 12px;
-}
-
-/* ── CERTIFICATIONS ── */
-.certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
-}
-
-.cert-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  transition: all 0.3s;
-  backdrop-filter: blur(10px);
-}
-
-.cert-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-2px); }
-
-.cert-badge {
-  width: 36px; height: 36px;
-  background: rgba(0,212,255,0.1);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  border: 1px solid rgba(0,212,255,0.2);
-  margin-bottom: 4px;
-}
-
-.cert-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.cert-org { font-size: 12px; color: var(--text3); }
-.cert-date { font-size: 12px; color: var(--teal); font-family: 'JetBrains Mono', monospace; }
-
-.cert-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  color: var(--teal);
-  text-decoration: none;
-  margin-top: 4px;
-  font-weight: 500;
-}
-
-/* ── CONTACT ── */
-#contact {
-  padding: 100px 80px;
-  position: relative;
-  z-index: 1;
-}
-
-.contact-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.contact-info { display: flex; flex-direction: column; gap: 20px; }
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-decoration: none;
-  color: var(--text);
-  transition: all 0.2s;
-}
-
-.contact-item:hover { border-color: var(--teal); color: var(--teal); transform: translateX(4px); }
-
-.contact-icon {
-  width: 40px; height: 40px;
-  background: rgba(0,212,255,0.1);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.contact-text { font-size: 13px; }
-.contact-label { font-size: 10px; color: var(--text3); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; }
-
-/* ── FORM ── */
-.contact-form { display: flex; flex-direction: column; gap: 16px; }
-
-.form-group { display: flex; flex-direction: column; gap: 6px; }
-
-.form-label {
-  font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--text3);
-  letter-spacing: 1px;
-}
-
-.form-input, .form-textarea {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: var(--text);
-  font-family: 'Instrument Sans', sans-serif;
-  font-size: 14px;
-  transition: border-color 0.2s;
-  outline: none;
-  resize: none;
-}
-
-.form-input:focus, .form-textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px var(--glow); }
-.form-textarea { min-height: 120px; }
-
-.form-submit {
-  background: var(--teal);
-  color: #0a0e1a;
-  border: none;
-  border-radius: 8px;
-  padding: 14px 28px;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: 'Instrument Sans', sans-serif;
-}
-
-.form-submit:hover { background: var(--teal2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,255,0.3); }
-
-/* ── FOOTER ── */
-footer {
-  text-align: center;
-  padding: 32px;
-  border-top: 1px solid var(--border);
-  font-size: 12px;
-  color: var(--text3);
-  font-family: 'JetBrains Mono', monospace;
-  position: relative;
-  z-index: 1;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--teal); }
-
-/* ── ABOUT LAYOUT ── */
-.about-section { padding: 80px 80px 0; }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-/* ── BURGER MENU ── */
-.nav-burger {
-  display: none;
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 18px;
-  cursor: pointer;
-  line-height: 1;
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  nav { padding: 14px 16px; }
-  .nav-burger { display: block; }
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 57px;
-    left: 0; right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 8px 24px 16px;
-    z-index: 99;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links li { border-bottom: 1px solid var(--border); }
-  .nav-links li:last-child { border-bottom: none; }
-  .nav-links a { display: block; padding: 14px 0; font-size: 15px; }
-  .theme-toggle { padding: 6px 10px; font-size: 11px; }
-  #hero { padding: 100px 24px 60px; }
-  .hero-name { font-size: clamp(28px, 8.5vw, 36px); letter-spacing: -1px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-photo-wrap { max-width: 280px; margin: 0 auto; }
-  .hero-stats { flex-wrap: wrap; gap: 24px; }
-  section { padding: 60px 24px; }
-  .about-section { padding: 60px 24px 0; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  #contact { padding: 60px 24px; }
-  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-}
-</style>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="css/skills.css">
+<link rel="stylesheet" href="css/projects.css">
+<link rel="stylesheet" href="css/experience.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/icons.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNVFJBGHT5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JNVFJBGHT5');
-</script>
+<script src="js/analytics.js"></script>
 
 </head>
 <body>
+
 
 <!-- ── NAVBAR ── -->
 <nav>
@@ -857,12 +48,12 @@ footer {
   </ul>
   <div style="display:flex;gap:8px;align-items:center;">
   <button class="theme-toggle" id="langBtn" style="border-color:var(--teal);color:var(--teal);">
-    🌐 English
+    <img class="ui-icon" src="assets/icons/globe.svg" alt="" aria-hidden="true"> English
   </button>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
-    <span id="themeIcon">☀️</span> Mode clair
+    <span id="themeIcon"><img class="ui-icon" src="assets/icons/sun.svg" alt="" aria-hidden="true"></span> Mode clair
   </button>
-  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()"><img class="ui-icon" src="assets/icons/menu.svg" alt="" aria-hidden="true"></button>
 </div>
 </nav>
 
@@ -880,7 +71,7 @@ footer {
       <div class="hero-cta">
         <a href="#projects" class="btn-primary" id="hero-cta1">Voir mes projets →</a>
         <a href="#contact" class="btn-secondary" id="hero-cta2">Me contacter</a>
-        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" id="hero-cv" style="border-color:var(--accent);color:var(--accent);">⬇ Télécharger CV</a>
+        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" id="hero-cv" style="border-color:var(--accent);color:var(--accent);"><img class="ui-icon" src="assets/icons/download.svg" alt="" aria-hidden="true"> Télécharger CV</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -931,21 +122,21 @@ footer {
       </div>
       <div class="reveal" style="display:flex;flex-direction:column;gap:16px;">
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;">🎯</div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/target.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card1-title">Orienté résultat</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card1-desc">Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;">🏗️</div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/building-2.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card2-title">Sensibilité architecture & qualité</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card2-desc">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;">🌍</div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/earth.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card3-title">Vision internationale</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card3-desc">Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.</div>
@@ -1030,7 +221,7 @@ footer {
       <div class="project-card reveal" style="border-left-color:var(--accent);grid-column:1/-1;">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
           <div style="display:flex;gap:12px;align-items:center;">
-            <div class="project-icon" style="background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);">🚚</div>
+            <div class="project-icon" style="background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);"><img class="ui-icon" src="assets/icons/truck.svg" alt="" aria-hidden="true"></div>
             <div>
               <div style="display:flex;align-items:center;gap:8px;">
                 <div class="project-name" id="qolee-name">QOLEE-TMS-AI</div>
@@ -1048,7 +239,7 @@ footer {
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon">🏫</div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/graduation-cap.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">EKOLOVA</div>
         <p class="project-desc" id="proj1-desc">Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.</p>
         <div class="project-tags">
@@ -1061,7 +252,7 @@ footer {
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon">🎬</div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/clapperboard.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">MadaMovie</div>
         <p class="project-desc" id="proj2-desc">Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.</p>
         <div class="project-tags">
@@ -1075,7 +266,7 @@ footer {
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon">🚗</div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/car-front.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">VarotraFiara</div>
         <p class="project-desc" id="proj3-desc">API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.</p>
         <div class="project-tags">
@@ -1182,32 +373,32 @@ footer {
     <h2 class="section-title reveal" id="cert-title">Certifications</h2>
     <div class="certs-grid">
       <div class="cert-card reveal">
-        <div class="cert-badge">⚡</div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/zap.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Angular Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Octobre 2025</div>
-        <a href="https://www.studysection.com/users/socialMedia/ODE4ODY5/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link">↗ Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/ODE4ODY5/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge">☕</div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/coffee.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Java Programming Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Juillet 2024</div>
-        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMx/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link">↗ Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMx/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge">🐍</div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/code-2.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Python Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Juillet 2024</div>
-        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMw/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link">↗ Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMw/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge">⚙️</div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/settings.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">C Programming Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Octobre 2025</div>
-        <a href="https://www.studysection.com/users/socialMedia/ODE4ODc0/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link">↗ Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/ODE4ODc0/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
         <div class="cert-badge">🇬🇧</div>
@@ -1230,28 +421,28 @@ footer {
       </p>
       <div class="contact-info">
         <a href="mailto:hardyrakoto66@gmail.com" class="contact-item">
-          <div class="contact-icon">✉️</div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/mail.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">EMAIL</div>
             <div class="contact-text">hardyrakoto66@gmail.com</div>
           </div>
         </a>
         <a href="https://github.com/HardyRak" target="_blank" class="contact-item">
-          <div class="contact-icon">💻</div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/laptop.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">GITHUB</div>
             <div class="contact-text">github.com/HardyRak</div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/hardy-rakotonarivo-a073072b5/" target="_blank" class="contact-item">
-          <div class="contact-icon">🔗</div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/link.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">LINKEDIN</div>
             <div class="contact-text">Hardy Rakotonarivo</div>
           </div>
         </a>
         <a href="tel:+261337154595" class="contact-item">
-          <div class="contact-icon">📞</div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/phone.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">TÉLÉPHONE</div>
             <div class="contact-text">+261 33 71 545 95</div>
@@ -1290,320 +481,18 @@ footer {
   <span style="color:var(--teal)">MH</span> · Manoela Hardy Rakotonarivo · <span id="footer-text">Construit avec passion depuis Antananarivo 🇲🇬</span>
 </footer>
 
-<script>
-// Theme toggle
-function toggleMenu() {
-  const links = document.querySelector('.nav-links');
-  const burger = document.getElementById('navBurger');
-  const open = links.classList.toggle('open');
-  burger.setAttribute('aria-expanded', open);
-  burger.textContent = open ? '✕' : '☰';
-}
-// Ferme le menu quand on clique sur un lien
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-  const links = document.querySelector('.nav-links');
-  if (links.classList.contains('open')) toggleMenu();
-}));
-
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn = document.getElementById('themeBtn');
-  const icon = document.getElementById('themeIcon');
-  if (html.getAttribute('data-theme') === 'dark') {
-    html.setAttribute('data-theme', 'light');
-    icon.textContent = '🌙';
-    btn.innerHTML = '<span id="themeIcon">🌙</span> Mode sombre';
-  } else {
-    html.setAttribute('data-theme', 'dark');
-    icon.textContent = '☀️';
-    btn.innerHTML = '<span id="themeIcon">☀️</span> Mode clair';
-  }
-}
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      // Animate skill bars
-      const fills = entry.target.querySelectorAll('.skill-fill');
-      fills.forEach(fill => fill.classList.add('animated'));
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Also animate skill bars when skills section is visible
-const skillsSection = document.getElementById('skills');
-if (skillsSection) {
-  const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        document.querySelectorAll('.skill-fill').forEach(fill => {
-          fill.classList.add('animated');
-        });
-      }
-    });
-  }, { threshold: 0.2 });
-  skillObserver.observe(skillsSection);
-}
-
-// EmailJS init
-emailjs.init("amG3GlmGlvEj6X9gz");
-
-// Contact form
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('form-send-btn');
-  const msg = document.getElementById('formMsg');
-  const form = e.target;
-
-  const templateParams = {
-    name: form.querySelector('input[type="text"]').value,
-    email: form.querySelector('input[type="email"]').value,
-    title: form.querySelectorAll('input[type="text"]')[1]?.value || 'Contact Portfolio',
-    message: form.querySelector('textarea').value
-  };
-
-  btn.innerHTML = '<span>Envoi en cours...</span>';
-  btn.disabled = true;
-  msg.style.display = 'none';
-
-  emailjs.send("service_i4k4w4j", "template_p3k0jd2", templateParams)
-    .then(() => {
-      btn.innerHTML = '<span>✓ Message envoyé !</span>';
-      msg.style.display = 'block';
-      msg.style.color = 'var(--teal)';
-      msg.textContent = '// Merci ! Je vous répondrai dans les plus brefs délais.';
-      form.reset();
-      setTimeout(() => {
-        btn.innerHTML = '<span>Envoyer le message</span> <span>→</span>';
-        btn.disabled = false;
-        msg.style.display = 'none';
-      }, 5000);
-    }, (error) => {
-      btn.innerHTML = '<span>Envoyer le message</span> <span>→</span>';
-      btn.disabled = false;
-      msg.style.display = 'block';
-      msg.style.color = 'var(--accent)';
-      msg.textContent = '// Erreur : ' + (error.text || 'Veuillez réessayer.');
-    });
-}
-
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id], div[id], [id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 100) current = section.id;
-  });
-  navLinks.forEach(link => {
-    link.style.color = link.getAttribute('href') === '#' + current ? 'var(--teal)' : '';
-  });
-});
-</script>
+<script src="js/menu-theme.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/active-navigation.js"></script>
 
 
 
 
 
 
-<script>
-const translations = {
-  fr: {
-    nav_home: 'Accueil', nav_about: 'À propos', nav_skills: 'Compétences',
-    nav_projects: 'Projets', nav_experience: 'Expérience', nav_certs: 'Certifications',
-    nav_contact: 'Contact', theme_light: 'Mode clair', theme_dark: 'Mode sombre',
-    lang_btn: '🌐 English',
-
-    hero_tag: 'Disponible · Ouvert aux opportunités',
-    hero_title: 'Développeur Full-Stack',
-    hero_desc: "Développeur Full-Stack avec près de 2 ans d'expérience sur des applications web professionnelles. J'ai notamment contribué au développement et à l'évolution de QOLEE-TMS-AI, une solution dédiée à la gestion et au suivi des livraisons de colis.",
-    hero_cta1: 'Voir mes projets →', hero_cta2: 'Me contacter', hero_cv: '⬇ Télécharger CV',
-
-    stat1: "ANS D'EXP.", stat2: 'PROJETS', stat3: 'EXPÉRIENCE PROFESSIONNELLE MAJEURE', stat4: 'CERTIFS', stat5: 'TECHNOS',
-
-    about_label: '// à propos', about_title: 'Pourquoi je code',
-    about_p1: "J'ai découvert la programmation avec une conviction simple : le code est l'outil le plus puissant pour transformer des idées en réalité. Ce qui me passionne, c'est de construire des systèmes qui <strong style='color:var(--text)'>fonctionnent vraiment</strong> — pas juste en démo, mais dans des contextes professionnels.",
-    about_p2: "Chez Orchis International, j'ai eu la chance de travailler sur <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> au début de ma carrière — une solution de gestion et de suivi des livraisons de colis dans le cadre de projets impliquant notamment <strong style='color:var(--text)'>Air France</strong> et <strong style='color:var(--text)'>Warning Group</strong>.",
-    about_p3: "Je suis constamment en train d'apprendre — architectures modernes, patterns avancés, nouveaux frameworks. Mon objectif : devenir un développeur capable de concevoir des systèmes <strong style='color:var(--text)'>scalables et maintenables</strong>.",
-
-    about_card1_title: 'Orienté résultat',
-    about_card1_desc: 'Je livre du code propre, testé et documenté — pas juste du code qui marche sur ma machine.',
-    about_card2_title: 'Architecture first',
-    about_card2_desc: 'CQRS, DDD, NX Monorepo — je porte une attention particulière à la structure et à la maintenabilité du code.',
-    about_card3_title: 'Vision internationale',
-    about_card3_desc: 'Travailler sur des projets à dimension internationale depuis Madagascar — c’est mon ambition.',
-
-    skills_label: '// compétences', skills_title: 'Stack technique',
-
-    projects_label: '// projets', projects_title: "Ce que j'ai construit",
-    proj1_desc: 'Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports.',
-    proj2_desc: 'Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT.',
-    proj3_desc: 'API REST de marketplace de véhicules — gestion des annonces, favoris et commissions.',
-
-    qolee_badge: 'PROFESSIONNEL',
-    qolee_company: 'Orchis International · Air France & Warning Group',
-    qolee_desc: 'Solution dédiée à la gestion et au suivi des livraisons de colis. Architecture NX Monorepo avec des patterns CQRS et DDD, développée dans le cadre de projets impliquant notamment Air France et Warning Group.',
-    proj_link: 'Voir sur GitHub →',
-
-    exp_label: '// expérience', exp_title: 'Parcours professionnel',
-    exp1_title: 'Développeur Full-Stack', exp1_date: 'Mai 2025 — Août 2026',
-
-    exp1_b1: 'Contribution au développement et à l’évolution de <strong>QOLEE-TMS-AI</strong>, une solution dédiée à la gestion et au suivi des livraisons de colis, dans le cadre de projets impliquant notamment <strong>Air France</strong> et <strong>Warning Group</strong>.',
-    exp1_b3: 'Développement de <strong>read-models CQRS</strong> suivant les principes <strong>DDD</strong>, avec <strong>MongoDB Change Streams</strong> sur les modules demande, exploitation et planification, ainsi que contribution aux contrats partagés (<strong>DTOs TypeScript</strong>).',
-    exp1_b4: 'Développement du front-end <strong>Angular</strong> avec <strong>NgRx Signals</strong>, mise en place de tests E2E avec <strong>Playwright</strong> et contribution aux pipelines <strong>CI/CD GitHub Actions</strong>.',
-
-    exp2_title: 'Stagiaire — Développement Web & Mobile', exp2_date: 'Oct. 2024 — Avr. 2025',
-    exp2_b1: 'Montée en compétence sur Angular et contribution active au développement de QOLEE-TMS-AI',
-    exp2_b2: 'Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)',
-    exp2_b3: 'Intégration agile, revue de code et participation aux sprints de livraison',
-
-    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: '↗ Vérifier le certificat',
-
-    contact_label: '// contact', contact_title: 'Travaillons<br>ensemble.',
-    contact_desc: 'Ouvert à de nouvelles opportunités — full-time, freelance ou collaboration sur un projet ambitieux.',
-    form_name: 'NOM', form_email: 'EMAIL', form_subject: 'SUJET',
-    form_subject_ph: 'Opportunité / Projet / Collaboration',
-    form_message: 'MESSAGE', form_message_ph: 'Décrivez votre projet ou opportunité...',
-    form_send: 'Envoyer le message',
-    form_success: '// Merci ! Je vous répondrai dans les plus brefs délais.',
-    footer: 'Construit avec passion depuis Antananarivo 🇲🇬'
-  },
-
-  en: {
-    nav_home: 'Home', nav_about: 'About', nav_skills: 'Skills',
-    nav_projects: 'Projects', nav_experience: 'Experience', nav_certs: 'Certifications',
-    nav_contact: 'Contact', theme_light: 'Light mode', theme_dark: 'Dark mode',
-    lang_btn: '🌐 Français',
-
-    hero_tag: 'Available · Open to opportunities',
-    hero_title: 'Full-Stack Developer',
-    hero_desc: "Full-Stack Developer with nearly 2 years of experience building professional web applications. I notably contributed to the development and evolution of QOLEE-TMS-AI, a solution dedicated to parcel delivery management and tracking.",
-    hero_cta1: 'View my projects →', hero_cta2: 'Contact me', hero_cv: '⬇ Download CV',
-
-    stat1: 'YRS EXP.', stat2: 'PROJECTS', stat3: 'MAJOR PROFESSIONAL EXPERIENCE', stat4: 'CERTS', stat5: 'TECHS',
-
-    about_label: '// about', about_title: 'Why I code',
-    about_p1: "I discovered programming with a simple conviction: code is the most powerful tool to turn ideas into reality. What drives me is building systems that <strong style='color:var(--text)'>actually work</strong> — not just in demos, but in professional environments.",
-    about_p2: "At Orchis International, I had the opportunity to work on <strong style='color:var(--text)'>QOLEE-TMS-AI</strong> early in my career — a parcel delivery management and tracking solution developed within projects involving <strong style='color:var(--text)'>Air France</strong> and <strong style='color:var(--text)'>Warning Group</strong>.",
-    about_p3: "I am constantly learning — modern architectures, advanced patterns and new frameworks. My goal is to become a developer capable of designing <strong style='color:var(--text)'>scalable and maintainable</strong> systems.",
-
-    about_card1_title: 'Result-driven',
-    about_card1_desc: 'I deliver clean, tested and documented code — not just code that works on my machine.',
-    about_card2_title: 'Architecture first',
-    about_card2_desc: 'CQRS, DDD, NX Monorepo — I pay close attention to code structure and maintainability.',
-    about_card3_title: 'International vision',
-    about_card3_desc: 'Working on internationally oriented projects from Madagascar — that is my ambition.',
-
-    skills_label: '// skills', skills_title: 'Tech stack',
-
-    projects_label: '// projects', projects_title: "What I've built",
-    proj1_desc: 'School management application — assessments, periods, student tracking and report exports.',
-    proj2_desc: 'Mobile streaming app for Malagasy films — catalog, subscriptions, JWT authentication.',
-    proj3_desc: 'REST API for a vehicle marketplace — listing management, favorites and commissions.',
-
-    qolee_badge: 'PROFESSIONAL',
-    qolee_company: 'Orchis International · Air France & Warning Group',
-    qolee_desc: 'Solution dedicated to parcel delivery management and tracking. NX Monorepo architecture using CQRS and DDD patterns, developed within projects involving Air France and Warning Group.',
-    proj_link: 'View on GitHub →',
-
-    exp_label: '// experience', exp_title: 'Professional journey',
-    exp1_title: 'Full-Stack Developer', exp1_date: 'May 2025 — Aug. 2026',
-
-    exp1_b1: 'Contribution to the development and evolution of <strong>QOLEE-TMS-AI</strong>, a solution dedicated to parcel delivery management and tracking, within projects involving <strong>Air France</strong> and <strong>Warning Group</strong>.',
-    exp1_b3: 'Development of <strong>CQRS read-models</strong> following <strong>DDD</strong> principles, using <strong>MongoDB Change Streams</strong> across request, operations and planning modules, as well as contribution to shared contracts (<strong>TypeScript DTOs</strong>).',
-    exp1_b4: 'Development of the <strong>Angular</strong> front-end with <strong>NgRx Signals</strong>, implementation of E2E tests with <strong>Playwright</strong> and contribution to <strong>CI/CD GitHub Actions</strong> pipelines.',
-
-    exp2_title: 'Intern — Web & Mobile Development', exp2_date: 'Oct. 2024 — Apr. 2025',
-    exp2_b1: 'Skill development on Angular and active contribution to QOLEE-TMS-AI',
-    exp2_b2: 'Algorithmic deepening through the <strong>France IOI</strong> program (C language)',
-    exp2_b3: 'Agile integration, code reviews and sprint delivery participation',
-
-    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: '↗ Verify certificate',
-
-    contact_label: '// contact', contact_title: "Let's work<br>together.",
-    contact_desc: 'Open to new opportunities — full-time position, freelance or collaboration on an ambitious project.',
-    form_name: 'NAME', form_email: 'EMAIL', form_subject: 'SUBJECT',
-    form_subject_ph: 'Opportunity / Project / Collaboration',
-    form_message: 'MESSAGE', form_message_ph: 'Describe your project or opportunity...',
-    form_send: 'Send message',
-    form_success: '// Thank you! I will get back to you as soon as possible.',
-    footer: 'Built with passion from Antananarivo 🇲🇬'
-  }
-};
-
-let currentLang = 'fr';
-
-function toggleLang() {
-  currentLang = currentLang === 'fr' ? 'en' : 'fr';
-  applyTranslations();
-}
-
-function applyTranslations() {
-  const t = translations[currentLang];
-  const set = (id, text) => { const el = document.getElementById(id); if(el) el.textContent = text; };
-  const setHTML = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
-  const setAttr = (id, attr, val) => { const el = document.getElementById(id); if(el) el[attr] = val; };
-
-  set('langBtn', t.lang_btn);
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const navKeys = ['nav_home','nav_about','nav_skills','nav_projects','nav_experience','nav_certs','nav_contact'];
-  navLinks.forEach((link, i) => { if(navKeys[i]) link.textContent = t[navKeys[i]]; });
-
-  set('hero-tag', t.hero_tag); set('hero-title', t.hero_title); set('hero-desc', t.hero_desc);
-  set('hero-cta1', t.hero_cta1); set('hero-cta2', t.hero_cta2); set('hero-cv', t.hero_cv);
-  const stats = document.querySelectorAll('.stat-label');
-  ['stat1','stat2','stat3','stat4','stat5'].forEach((k,i) => { if(stats[i]) stats[i].textContent = t[k]; });
-
-  set('about-label', t.about_label); set('about-title', t.about_title);
-  setHTML('about-p1', t.about_p1); setHTML('about-p2', t.about_p2); setHTML('about-p3', t.about_p3);
-  set('about-card1-title', t.about_card1_title); set('about-card1-desc', t.about_card1_desc);
-  set('about-card2-title', t.about_card2_title); set('about-card2-desc', t.about_card2_desc);
-  set('about-card3-title', t.about_card3_title); set('about-card3-desc', t.about_card3_desc);
-
-  set('skills-label', t.skills_label); set('skills-title', t.skills_title);
-  set('projects-label', t.projects_label); set('projects-title', t.projects_title);
-  set('qolee-badge', t.qolee_badge);
-  set('qolee-company', t.qolee_company);
-  set('qolee-desc', t.qolee_desc);
-  set('proj1-desc', t.proj1_desc); set('proj2-desc', t.proj2_desc); set('proj3-desc', t.proj3_desc);
-  document.querySelectorAll('.project-link').forEach(l => l.textContent = t.proj_link);
-
-  set('exp-label', t.exp_label); set('exp-title', t.exp_title);
-  set('exp1-title', t.exp1_title); set('exp1-date', t.exp1_date);
-  setHTML('exp1-b1', t.exp1_b1); setHTML('exp1-b2', t.exp1_b2);
-  setHTML('exp1-b3', t.exp1_b3); setHTML('exp1-b4', t.exp1_b4);
-  set('exp2-title', t.exp2_title); set('exp2-date', t.exp2_date);
-  setHTML('exp2-b1', t.exp2_b1); setHTML('exp2-b2', t.exp2_b2); setHTML('exp2-b3', t.exp2_b3);
-
-  set('cert-label', t.cert_label); set('cert-title', t.cert_title);
-  document.querySelectorAll('.cert-link').forEach(l => l.textContent = t.cert_verify);
-
-  set('contact-label', t.contact_label); setHTML('contact-title', t.contact_title);
-  set('contact-desc', t.contact_desc);
-  set('form-name', t.form_name); set('form-email-label', t.form_email);
-  set('form-subject-label', t.form_subject);
-  setAttr('form-subject-input', 'placeholder', t.form_subject_ph);
-  set('form-message-label', t.form_message);
-  setAttr('form-message-input', 'placeholder', t.form_message_ph);
-  const sendBtn = document.getElementById('form-send-btn');
-  if(sendBtn) { const sp = sendBtn.querySelector('span'); if(sp) sp.textContent = t.form_send; }
-  set('footer-text', t.footer);
-
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  const themeBtn = document.getElementById('themeBtn');
-  if(themeBtn) themeBtn.innerHTML = isDark
-    ? '<span>☀️</span> ' + t.theme_light
-    : '<span>🌙</span> ' + t.theme_dark;
-}
-
-window.addEventListener('load', function() {
-  const langBtn = document.getElementById('langBtn');
-  if(langBtn) langBtn.onclick = toggleLang;
-});
-</script>
+<script src="js/i18n/fr.js"></script>
+<script src="js/i18n/en.js"></script>
+<script src="js/i18n/apply.js"></script>
 </body>
 </html>
