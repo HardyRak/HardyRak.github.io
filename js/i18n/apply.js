@@ -59,8 +59,8 @@ function applyTranslations() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const themeBtn = document.getElementById('themeBtn');
   if(themeBtn) themeBtn.innerHTML = isDark
-    ? '<span><span class="ui-icon" style="--icon:url('assets/icons/sun.svg')" aria-hidden="true"></span></span> ' + t.theme_light
-    : '<span><span class="ui-icon" style="--icon:url('assets/icons/moon.svg')" aria-hidden="true"></span></span> ' + t.theme_dark;
+    ? '<span><img class="ui-icon" src="assets/icons/sun.svg" alt="" aria-hidden="true"></span> ' + t.theme_light
+    : '<span><img class="ui-icon" src="assets/icons/moon.svg" alt="" aria-hidden="true"></span> ' + t.theme_dark;
 }
 
 window.addEventListener('load', function() {
