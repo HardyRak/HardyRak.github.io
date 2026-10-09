@@ -82,6 +82,3 @@
   .contact-inner { grid-template-columns: 1fr; gap: 40px; }
 }
 
-/* SVG icons share the surrounding text color and align with labels. */
-.ui-icon { display: inline-block; width: 1.2em; height: 1.2em; flex-shrink: 0; vertical-align: -0.2em; }
-.project-icon .ui-icon, .cert-badge .ui-icon, .contact-icon .ui-icon { width: 1em; height: 1em; }
