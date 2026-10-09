@@ -5,7 +5,7 @@ function toggleMenu() {
   const burger = document.getElementById('navBurger');
   const open = links.classList.toggle('open');
   burger.setAttribute('aria-expanded', open);
-  burger.innerHTML = open ? "<span class=\"ui-icon\" style=\"--icon:url('assets/icons/x.svg')\" aria-hidden=\"true\"></span>" : "<span class=\"ui-icon\" style=\"--icon:url('assets/icons/menu.svg')\" aria-hidden=\"true\"></span>";
+  burger.innerHTML = open ? "<img class=\"ui-icon\" src=\"assets/icons/x.svg\" alt=\"\" aria-hidden=\"true\">" : "<img class=\"ui-icon\" src=\"assets/icons/menu.svg\" alt=\"\" aria-hidden=\"true\">";
 }
 // Ferme le menu quand on clique sur un lien
 document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
@@ -20,10 +20,10 @@ function toggleTheme() {
   if (html.getAttribute('data-theme') === 'dark') {
     html.setAttribute('data-theme', 'light');
     
-    btn.innerHTML = "<span id=\"themeIcon\"><span class=\"ui-icon\" style=\"--icon:url('assets/icons/moon.svg')\" aria-hidden=\"true\"></span></span> Mode sombre";
+    btn.innerHTML = "<span id=\"themeIcon\"><img class=\"ui-icon\" src=\"assets/icons/moon.svg\" alt=\"\" aria-hidden=\"true\"></span> Mode sombre";
   } else {
     html.setAttribute('data-theme', 'dark');
     
-    btn.innerHTML = "<span id=\"themeIcon\"><span class=\"ui-icon\" style=\"--icon:url('assets/icons/sun.svg')\" aria-hidden=\"true\"></span></span> Mode clair";
+    btn.innerHTML = "<span id=\"themeIcon\"><img class=\"ui-icon\" src=\"assets/icons/sun.svg\" alt=\"\" aria-hidden=\"true\"></span> Mode clair";
   }
 }
