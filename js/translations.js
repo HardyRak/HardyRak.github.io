@@ -184,8 +184,8 @@ function applyTranslations() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const themeBtn = document.getElementById('themeBtn');
   if(themeBtn) themeBtn.innerHTML = isDark
-    ? '<span><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-sun"></use></svg></span> ' + t.theme_light
-    : '<span><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-moon"></use></svg></span> ' + t.theme_dark;
+    ? '<span><img class="ui-icon" src="assets/icons/sun.svg" alt="" aria-hidden="true"></span> ' + t.theme_light
+    : '<span><img class="ui-icon" src="assets/icons/moon.svg" alt="" aria-hidden="true"></span> ' + t.theme_dark;
 }
 
 window.addEventListener('load', function() {
