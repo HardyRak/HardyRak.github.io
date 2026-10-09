@@ -4,12 +4,12 @@ const translations = {
     nav_home: 'Accueil', nav_about: 'À propos', nav_skills: 'Compétences',
     nav_projects: 'Projets', nav_experience: 'Expérience', nav_certs: 'Certifications',
     nav_contact: 'Contact', theme_light: 'Mode clair', theme_dark: 'Mode sombre',
-    lang_btn: '🌐 English',
+    lang_btn: ' English',
 
     hero_tag: 'Disponible · Ouvert aux opportunités',
     hero_title: 'Développeur Full-Stack',
     hero_desc: "Développeur Full-Stack avec près de 2 ans d'expérience sur des applications web professionnelles. J'ai notamment contribué au développement et à l'évolution de QOLEE-TMS-AI, une solution dédiée à la gestion et au suivi des livraisons de colis.",
-    hero_cta1: 'Voir mes projets →', hero_cta2: 'Me contacter', hero_cv: '⬇ Télécharger CV',
+    hero_cta1: 'Voir mes projets →', hero_cta2: 'Me contacter', hero_cv: ' Télécharger CV',
 
     stat1: "ANS D'EXP.", stat2: 'PROJETS', stat3: 'EXPÉRIENCE PROFESSIONNELLE MAJEURE', stat4: 'CERTIFS', stat5: 'TECHNOS',
 
@@ -49,7 +49,7 @@ const translations = {
     exp2_b2: 'Approfondissement algorithmique via le programme <strong>France IOI</strong> (langage C)',
     exp2_b3: 'Intégration agile, revue de code et participation aux sprints de livraison',
 
-    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: '↗ Vérifier le certificat',
+    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: ' Vérifier le certificat',
 
     contact_label: '// contact', contact_title: 'Travaillons<br>ensemble.',
     contact_desc: 'Ouvert à de nouvelles opportunités — full-time, freelance ou collaboration sur un projet ambitieux.',
@@ -65,12 +65,12 @@ const translations = {
     nav_home: 'Home', nav_about: 'About', nav_skills: 'Skills',
     nav_projects: 'Projects', nav_experience: 'Experience', nav_certs: 'Certifications',
     nav_contact: 'Contact', theme_light: 'Light mode', theme_dark: 'Dark mode',
-    lang_btn: '🌐 Français',
+    lang_btn: ' Français',
 
     hero_tag: 'Available · Open to opportunities',
     hero_title: 'Full-Stack Developer',
     hero_desc: "Full-Stack Developer with nearly 2 years of experience building professional web applications. I notably contributed to the development and evolution of QOLEE-TMS-AI, a solution dedicated to parcel delivery management and tracking.",
-    hero_cta1: 'View my projects →', hero_cta2: 'Contact me', hero_cv: '⬇ Download CV',
+    hero_cta1: 'View my projects →', hero_cta2: 'Contact me', hero_cv: ' Download CV',
 
     stat1: 'YRS EXP.', stat2: 'PROJECTS', stat3: 'MAJOR PROFESSIONAL EXPERIENCE', stat4: 'CERTS', stat5: 'TECHS',
 
@@ -110,7 +110,7 @@ const translations = {
     exp2_b2: 'Algorithmic deepening through the <strong>France IOI</strong> program (C language)',
     exp2_b3: 'Agile integration, code reviews and sprint delivery participation',
 
-    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: '↗ Verify certificate',
+    cert_label: '// certifications', cert_title: 'Certifications', cert_verify: ' Verify certificate',
 
     contact_label: '// contact', contact_title: "Let's work<br>together.",
     contact_desc: 'Open to new opportunities — full-time position, freelance or collaboration on an ambitious project.',
@@ -184,8 +184,8 @@ function applyTranslations() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const themeBtn = document.getElementById('themeBtn');
   if(themeBtn) themeBtn.innerHTML = isDark
-    ? '<span>☀️</span> ' + t.theme_light
-    : '<span>🌙</span> ' + t.theme_dark;
+    ? '<span><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-sun"></use></svg></span> ' + t.theme_light
+    : '<span><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#icon-moon"></use></svg></span> ' + t.theme_dark;
 }
 
 window.addEventListener('load', function() {
