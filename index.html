@@ -39,12 +39,12 @@
   </ul>
   <div style="display:flex;gap:8px;align-items:center;">
   <button class="theme-toggle" id="langBtn" style="border-color:var(--teal);color:var(--teal);">
-    <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-globe"></use></svg> English
+    <img class="ui-icon" src="assets/icons/globe.svg" alt="" aria-hidden="true"> English
   </button>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
-    <span id="themeIcon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-sun"></use></svg></span> Mode clair
+    <span id="themeIcon"><img class="ui-icon" src="assets/icons/sun.svg" alt="" aria-hidden="true"></span> Mode clair
   </button>
-  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></button>
+  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu()"><img class="ui-icon" src="assets/icons/menu.svg" alt="" aria-hidden="true"></button>
 </div>
 </nav>
 
@@ -62,7 +62,7 @@
       <div class="hero-cta">
         <a href="#projects" class="btn-primary" id="hero-cta1">Voir mes projets →</a>
         <a href="#contact" class="btn-secondary" id="hero-cta2">Me contacter</a>
-        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" id="hero-cv" style="border-color:var(--accent);color:var(--accent);"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-download"></use></svg> Télécharger CV</a>
+        <a href="CV_Manoela_Hardy_RAKOTONARIVO.pdf" download class="btn-secondary" id="hero-cv" style="border-color:var(--accent);color:var(--accent);"><img class="ui-icon" src="assets/icons/download.svg" alt="" aria-hidden="true"> Télécharger CV</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -113,21 +113,21 @@
       </div>
       <div class="reveal" style="display:flex;flex-direction:column;gap:16px;">
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-target"></use></svg></div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/target.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card1-title">Orienté résultat</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card1-desc">Je livre du code propre, testé et documenté — pas juste du code qui "marche sur ma machine".</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-building-2"></use></svg></div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/building-2.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card2-title">Sensibilité architecture & qualité</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card2-desc">CQRS, DDD, NX Monorepo — je pense la structure avant d'écrire la première ligne.</div>
           </div>
         </div>
         <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(10px);">
-          <div style="font-size:28px;"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-earth"></use></svg></div>
+          <div style="font-size:28px;"><img class="ui-icon" src="assets/icons/earth.svg" alt="" aria-hidden="true"></div>
           <div>
             <div style="font-weight:700;font-family:'Syne',sans-serif;color:var(--text);margin-bottom:4px;" id="about-card3-title">Vision internationale</div>
             <div style="font-size:13px;color:var(--text2);" id="about-card3-desc">Travailler sur des projets à impact global depuis Madagascar — c'est mon ambition.</div>
@@ -212,7 +212,7 @@
       <div class="project-card reveal" style="border-left-color:var(--accent);grid-column:1/-1;">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
           <div style="display:flex;gap:12px;align-items:center;">
-            <div class="project-icon" style="background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-truck"></use></svg></div>
+            <div class="project-icon" style="background:rgba(255,107,53,0.1);border-color:rgba(255,107,53,0.3);"><img class="ui-icon" src="assets/icons/truck.svg" alt="" aria-hidden="true"></div>
             <div>
               <div style="display:flex;align-items:center;gap:8px;">
                 <div class="project-name" id="qolee-name">QOLEE-TMS-AI</div>
@@ -230,7 +230,7 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-graduation-cap"></use></svg></div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/graduation-cap.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">EKOLOVA</div>
         <p class="project-desc" id="proj1-desc">Application de gestion scolaire — évaluations, périodes, suivi des élèves et export de rapports. Interface moderne et intuitive.</p>
         <div class="project-tags">
@@ -243,7 +243,7 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-clapperboard"></use></svg></div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/clapperboard.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">MadaMovie</div>
         <p class="project-desc" id="proj2-desc">Application mobile de streaming de films malgaches — catalogue, abonnements, authentification JWT et interface mobile-first.</p>
         <div class="project-tags">
@@ -257,7 +257,7 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-car-front"></use></svg></div>
+        <div class="project-icon"><img class="ui-icon" src="assets/icons/car-front.svg" alt="" aria-hidden="true"></div>
         <div class="project-name">VarotraFiara</div>
         <p class="project-desc" id="proj3-desc">API REST de marketplace de véhicules — gestion des annonces, système de favoris et commissions. Architecture clean et scalable.</p>
         <div class="project-tags">
@@ -364,32 +364,32 @@
     <h2 class="section-title reveal" id="cert-title">Certifications</h2>
     <div class="certs-grid">
       <div class="cert-card reveal">
-        <div class="cert-badge"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-zap"></use></svg></div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/zap.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Angular Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Octobre 2025</div>
-        <a href="https://www.studysection.com/users/socialMedia/ODE4ODY5/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-up-right"></use></svg> Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/ODE4ODY5/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-coffee"></use></svg></div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/coffee.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Java Programming Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Juillet 2024</div>
-        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMx/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-up-right"></use></svg> Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMx/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-code-2"></use></svg></div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/code-2.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">Python Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Juillet 2024</div>
-        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMw/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-up-right"></use></svg> Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/NzY3MzMw/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
-        <div class="cert-badge"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-settings"></use></svg></div>
+        <div class="cert-badge"><img class="ui-icon" src="assets/icons/settings.svg" alt="" aria-hidden="true"></div>
         <div class="cert-name">C Programming Foundation</div>
         <div class="cert-org">StudySection E-Certification</div>
         <div class="cert-date">Octobre 2025</div>
-        <a href="https://www.studysection.com/users/socialMedia/ODE4ODc0/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-arrow-up-right"></use></svg> Vérifier le certificat</a>
+        <a href="https://www.studysection.com/users/socialMedia/ODE4ODc0/aGFyZHlyYWtvdG82NkBnbWFpbC5jb20%3D" target="_blank" class="cert-link"><img class="ui-icon" src="assets/icons/arrow-up-right.svg" alt="" aria-hidden="true"> Vérifier le certificat</a>
       </div>
       <div class="cert-card reveal">
         <div class="cert-badge">🇬🇧</div>
@@ -412,28 +412,28 @@
       </p>
       <div class="contact-info">
         <a href="mailto:hardyrakoto66@gmail.com" class="contact-item">
-          <div class="contact-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-mail"></use></svg></div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/mail.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">EMAIL</div>
             <div class="contact-text">hardyrakoto66@gmail.com</div>
           </div>
         </a>
         <a href="https://github.com/HardyRak" target="_blank" class="contact-item">
-          <div class="contact-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-laptop"></use></svg></div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/laptop.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">GITHUB</div>
             <div class="contact-text">github.com/HardyRak</div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/hardy-rakotonarivo-a073072b5/" target="_blank" class="contact-item">
-          <div class="contact-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-link"></use></svg></div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/link.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">LINKEDIN</div>
             <div class="contact-text">Hardy Rakotonarivo</div>
           </div>
         </a>
         <a href="tel:+261337154595" class="contact-item">
-          <div class="contact-icon"><svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-phone"></use></svg></div>
+          <div class="contact-icon"><img class="ui-icon" src="assets/icons/phone.svg" alt="" aria-hidden="true"></div>
           <div>
             <div class="contact-label">TÉLÉPHONE</div>
             <div class="contact-text">+261 33 71 545 95</div>
