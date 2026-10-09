@@ -1,0 +1,17 @@
+/* Theme-aware SVG masks: each icon inherits the appropriate palette color. */
+.ui-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+  vertical-align: -0.23em;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+.theme-toggle .ui-icon, .nav-burger .ui-icon { width: 18px; height: 18px; }
+.project-icon .ui-icon { width: 24px; height: 24px; }
+.cert-badge .ui-icon { width: 21px; height: 21px; }
+.contact-icon .ui-icon { width: 22px; height: 22px; }
+.project-icon, .cert-badge, .contact-icon { color: var(--teal); }
+.contact-item:hover .contact-icon { color: var(--teal2); }
